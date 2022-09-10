@@ -18,7 +18,8 @@
     "husky": "4",
     "lint-staged": "^13.0.3",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "react-router-dom": "6"
   },
   "devDependencies": {
     "@babel/core": "^7.19.0",

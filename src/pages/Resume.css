@@ -1,0 +1,10 @@
+.download-button {
+  margin-top: 30px;
+  height: 40px;
+  width: 150px;
+  border: 1px solid #eb4a2f;
+  background-color: #ffffff;
+  color: #010101;
+  font-size: 20px;
+  border-radius: 5px;
+}
