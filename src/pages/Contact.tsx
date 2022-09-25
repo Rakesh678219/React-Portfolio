@@ -12,7 +12,7 @@ const Contact = () => {
                               <input type="number" id="phno" name="phno" placeholder="Enter your phone number" />
                               <input type="email" id="email" name="email" placeholder="Enter your e-mail " />
                               <input style={{ height: '100px' }} type="description" id="message" name="message" placeholder="Type your message" />
-                              <input type="submit" defaultValue="Submit" />
+                              <Button title="submit" />
                          </form>
                     </div>
                </div>
