@@ -1,0 +1,19 @@
+.blog-page h1 {
+  text-align: center;
+}
+.auto-grid-blog {
+  --auto-grid-min-size: 30rem;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(var(--auto-grid-min-size), 1fr)
+  );
+  grid-gap: 1rem;
+  margin: 10px 20px 10px 20px;
+  padding: 50px;
+}
+
+.auto-grid-blog li {
+  padding: 15px;
+  border-radius: 10px;
+}
