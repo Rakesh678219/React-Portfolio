@@ -1,9 +1,15 @@
 import React from 'react'
+import Button from './Button'
 import './Card.css'
 const Card = (props: any) => {
      return (
           <>
-               <h1>Card Component</h1>
+               <div className="card-container">
+                    <h1>{props.title}</h1>
+                    <img width="100%" src={props.img} alt="" />
+                    <p>{props.content}</p>
+                    <Button title={'open'} />
+               </div>
           </>
 
      )

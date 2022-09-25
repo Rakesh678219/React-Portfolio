@@ -1,11 +1,11 @@
 .home-page {
-  padding: 300px 200px 250px;
+  padding: 10%;
   height: 1000px;
   background: url(../../public/bg1.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 .my-details {
-  width: 500px;
+  width: 40%;
   padding: 50px 80px 50px;
   border-radius: 20px;
   background-color: #fff;

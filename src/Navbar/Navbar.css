@@ -10,14 +10,14 @@ div {
   color: #ffffff;
 }
 .navbar-nav {
-  width: 45%;
+  width: 40%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;
 }
 .nav-name {
-  padding: 5px;
+  padding: 30px;
   text-align: center;
   margin: 10px;
 }
