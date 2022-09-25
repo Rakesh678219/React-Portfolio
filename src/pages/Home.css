@@ -1,80 +1,33 @@
-#banner {
-  max-width: 100%;
-  height: auto;
-  left: 0px;
-  right: 0px;
+.home-page {
+  padding: 300px 200px 250px;
+  height: 1000px;
+  background: url(../../public/bg1.jpg) no-repeat center center fixed;
+  background-size: cover;
 }
-
-#myImage {
-  width: 100%;
-  height: auto;
-  left: 0px;
-  right: 0px;
+.my-details {
+  width: 500px;
+  padding: 50px 80px 50px;
+  border-radius: 20px;
+  background-color: #fff;
 }
-/* Container holding the image and the text */
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
+.about-me-page {
+  padding: 30px 30px 30px;
+  height: 1200px;
+  background-color: #181818;
+  color: #ffffff;
 }
-
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
+.about-me-page h1 {
+  text-align: left;
+  line-height: 10px;
 }
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
+.split-div {
+  display: inline-block;
 }
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 0%;
+.split-div1 {
 }
-
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-/* Centered text */
-.centered {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.typing-text {
-  animation: typing-text 2s steps(24), blink 0.5s infinite alternate;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 3px solid #000;
-}
-
-@keyframes typing-text {
-  from {
-    width: 0;
-  }
-  to {
-    width: 24ch;
-  }
-}
-
-@keyframes blink {
-  from {
-    border-color: transparent;
-  }
-  to {
-    border-color: #000;
-  }
+.split-div2 {
+  padding: 30px 400px 30px;
+  color: rgb(131, 131, 131);
+  font-size: 19px;
+  line-height: 25px;
 }

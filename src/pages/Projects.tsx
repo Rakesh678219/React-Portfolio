@@ -4,11 +4,7 @@ import './Projects.css'
 const Projects = () => {
      return (
           <>
-               <div className='project-grid'>
-                    <Card />
-                    <Card />
-                    <Card />
-               </div>
+               <h1>Projects Page</h1>
           </>
      )
 }
