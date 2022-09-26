@@ -14,19 +14,22 @@ export const App = () => {
   return (
     <>
       <Navbar />
-      <div className="body">
-        <Router>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/contact" element={<Contact />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="/blog" element={<Blog />} />
-            <Route path="/resume" element={<Resume />} />
-            <Route path="/portfolio" element={<Portfolio />} />
-          </Routes>
-        </Router>
-      </div>
+      <body>
+        <div className="body">
+          <Router>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/blog" element={<Blog />} />
+              <Route path="/resume" element={<Resume />} />
+              <Route path="/portfolio" element={<Portfolio />} />
+            </Routes>
+          </Router>
+        </div>
+      </body>
+
       <footer>
         <div className="footer row primary">
           <div className="column about">
