@@ -59,7 +59,6 @@ ul.social-icons {
 .social-icons li {
   vertical-align: top;
   display: inline;
-  height: 100px;
 }
 .social-icons a {
   color: #fff;
@@ -115,4 +114,63 @@ ul.social-icons {
 }
 .all-rights-reserved {
   margin-top: 3rem;
+}
+
+footer {
+  background-color: #121315;
+  color: #a7a7a7;
+  font-size: 16px;
+  width: 100%;
+}
+
+footer * {
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+}
+
+.row {
+  padding: 1em 1em;
+}
+.row.primary {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 2fr;
+  align-items: stretch;
+}
+.column {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 2em;
+  min-height: 15em;
+}
+h3 {
+  width: 100%;
+  text-align: left;
+  color: white;
+  font-size: 1.4em;
+  white-space: nowrap;
+}
+.about p {
+  text-align: left;
+  line-height: 2;
+  margin: 0;
+}
+
+li:not(:first-child) {
+  margin-top: 0.8em;
+}
+
+input,
+button {
+  font-size: 1em;
+  padding: 1em;
+  width: 100%;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+button {
+  background-color: #e188a5;
+  color: #ffffff;
 }
