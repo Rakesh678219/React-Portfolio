@@ -1,0 +1,9 @@
+.resume-container {
+  border-top: 1px solid #ccc;
+  background-color: #e188a5;
+  color: #fff;
+  height: 80vh;
+  margin: 2% 10% 5% 10%;
+  padding: 20px;
+  border-radius: 10px;
+}

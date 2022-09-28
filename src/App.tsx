@@ -33,45 +33,22 @@ export const App = () => {
       <footer>
         <div className="footer row primary">
           <div className="column about">
-            <h3>Web Developer</h3>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae,
-              voluptatem corporis error non,
-            </p>
-            <div className="footer-social-icons">
+            {/* <div className="footer-social-icons">
               <ul className="social-icons">
                 <li><a href="" className="social-icon"> <i className="fa fa-facebook"></i></a></li>
                 <li><a href="" className="social-icon"> <i className="fa fa-whatsapp"></i></a></li>
                 <li><a href="" className="social-icon"> <i className="fa fa-linkedin"></i></a></li>
                 <li><a href="" className="social-icon"> <i className="fa fa-instagram"></i></a></li>
               </ul>
-            </div>
+            </div> */}
           </div>
-          <div className="column links">
-            <h3>Some Links</h3>
-            <ul>
-              <li><a href="#faq">F.A.Q</a></li>
-              <li><a href="#cookies-policy">Cookies Policy</a></li>
-              <li><a href="#terms-of-services">Terms Of Service</a></li>
-              <li><a href="#support">Support</a></li>
-            </ul>
-          </div>
-          <div className="column links">
-            <h3>Some Links</h3>
-            <ul>
-              <li><a href="#faq">F.A.Q</a></li>
-              <li><a href="#cookies-policy">Cookies Policy</a></li>
-              <li><a href="#terms-of-services">Terms Of Service</a></li>
-              <li><a href="#support">Support</a></li>
-            </ul>
-          </div>
-          <div className="column subscribe">
+          {/* <div className="column subscribe">
             <h3>Newsletter</h3>
             <div>
               <input type="email" placeholder="Your email id here" />
               <button>Subscribe</button>
             </div>
-          </div>
+          </div> */}
         </div>
       </footer>
     </>

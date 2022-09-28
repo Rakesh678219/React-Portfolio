@@ -19,6 +19,44 @@
     <title>Rakesh Peddamallu</title>
   </head>
   <body>
+    <script>
+      var url =
+        'https://wati-integration-service.clare.ai/ShopifyWidget/shopifyWidget.js?2491'
+      var s = document.createElement('script')
+      s.type = 'text/javascript'
+      s.async = true
+      s.src = url
+      var options = {
+        enabled: true,
+        chatButtonSetting: {
+          backgroundColor: '#e188a5',
+          ctaText: 'contact me',
+          borderRadius: '10',
+          marginLeft: '0',
+          marginBottom: '20',
+          marginRight: '20',
+          position: 'right',
+        },
+        brandSetting: {
+          brandName: 'Rakesh Peddamallu',
+          brandSubTitle: 'Typically replies within a day',
+          brandImg:
+            'https://media-exp1.licdn.com/dms/image/C5603AQHmODX27aRpeg/profile-displayphoto-shrink_800_800/0/1657626686762?e=1669852800&v=beta&t=u-wfRdF_0AqFA2CBolQhUhE6KOWkJOrUf89V1eiYTyg',
+          welcomeText: 'Hi !!',
+          messageText: 'Hi !!',
+          backgroundColor: '#e188a5',
+          ctaText: 'Start Chat',
+          borderRadius: '25',
+          autoShow: false,
+          phoneNumber: '916303665574',
+        },
+      }
+      s.onload = function () {
+        CreateWhatsappChatWidget(options)
+      }
+      var x = document.getElementsByTagName('script')[0]
+      x.parentNode.insertBefore(s, x)
+    </script>
     <div id="root"></div>
   </body>
 </html>

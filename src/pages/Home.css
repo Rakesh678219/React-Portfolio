@@ -5,7 +5,6 @@
   background-size: cover;
 }
 .my-details {
-  width: 40%;
   padding: 50px 80px 50px;
   border-radius: 20px;
   background-color: #fff;
@@ -22,10 +21,9 @@
 .split-div {
   display: inline-block;
 }
-.split-div1 {
+.split-div2 p {
 }
 .split-div2 {
-  padding: 30px 400px 30px;
   color: rgb(131, 131, 131);
   font-size: 19px;
   line-height: 25px;
