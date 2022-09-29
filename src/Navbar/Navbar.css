@@ -42,7 +42,7 @@ body {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 717px) {
   .topnav.responsive {
     position: relative;
   }
