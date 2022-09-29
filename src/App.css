@@ -127,7 +127,6 @@ footer {
   padding: 1em 1em;
 }
 .row.primary {
-  display: grid;
   grid-template-columns: 2fr 1fr 1fr 2fr;
   align-items: stretch;
 }
