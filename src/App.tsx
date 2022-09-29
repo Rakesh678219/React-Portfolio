@@ -32,23 +32,9 @@ export const App = () => {
 
       <footer>
         <div className="footer row primary">
-          <div className="column about">
-            {/* <div className="footer-social-icons">
-              <ul className="social-icons">
-                <li><a href="" className="social-icon"> <i className="fa fa-facebook"></i></a></li>
-                <li><a href="" className="social-icon"> <i className="fa fa-whatsapp"></i></a></li>
-                <li><a href="" className="social-icon"> <i className="fa fa-linkedin"></i></a></li>
-                <li><a href="" className="social-icon"> <i className="fa fa-instagram"></i></a></li>
-              </ul>
-            </div> */}
-          </div>
-          {/* <div className="column subscribe">
-            <h3>Newsletter</h3>
-            <div>
-              <input type="email" placeholder="Your email id here" />
-              <button>Subscribe</button>
-            </div>
-          </div> */}
+          <span style={{ textAlign: 'center' }}>
+            <p> All Rights Reserved</p>
+          </span>
         </div>
       </footer>
     </>
