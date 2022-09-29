@@ -13,9 +13,9 @@ const Card = (props: any) => {
      return (
           <>
                <div className="card-container">
-                    <h3>{props.title}</h3>
+                    <h3 className="sub-heading">{props.title}</h3>
                     <img width="100%" src={props.img} alt="" />
-                    <p>{props.content}</p>
+                    <p className='text-content'>{props.content}</p>
                     <Button title={'open'} onClick={props.onClick} />
                </div>
           </>

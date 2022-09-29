@@ -166,3 +166,10 @@ button {
   color: #333333;
   font-size: 2em;
 }
+.text-content {
+  color: #4b4b4e;
+}
+.sub-heading {
+  text-align: left;
+  color: #333333;
+}
