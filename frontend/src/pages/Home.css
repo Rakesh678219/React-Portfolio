@@ -1,6 +1,7 @@
 .home-page {
   padding: 10%;
   height: 1000px;
+<<<<<<< HEAD
   background: url(../../public/bg-home.jpg) no-repeat center center fixed;
   background-size: cover;
 }
@@ -11,6 +12,18 @@
   color: #fff;
 }
 .about-me-page {
+=======
+  background: url(../../public/bg1.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.my-details {
+  padding: 50px 80px 50px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.about-me-page {
+  padding: 30px 30px 30px;
+>>>>>>> 43ca7bf (moved all to frontend folder)
   background-color: #181818;
   color: #ffffff;
 }
@@ -24,6 +37,7 @@
 .split-div2 p {
 }
 .split-div2 {
+<<<<<<< HEAD
   background-color: var(--secondary);
   color: var(--tertiary);
   font-size: 19px;
@@ -52,4 +66,9 @@
   to {
     background-position: 1000%;
   }
+=======
+  color: rgb(131, 131, 131);
+  font-size: 19px;
+  line-height: 25px;
+>>>>>>> 43ca7bf (moved all to frontend folder)
 }

@@ -1,6 +1,9 @@
 .card-container {
   display: inline-block;
+<<<<<<< HEAD
   background-color: var(--tertiary);
   padding: 20px;
   border-radius: 2px;
+=======
+>>>>>>> 43ca7bf (moved all to frontend folder)
 }

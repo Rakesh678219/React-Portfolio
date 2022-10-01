@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .blog-card-container {
   display: inline-block;
   background-color: var(--tertiary);
@@ -12,3 +13,11 @@
   max-width: 100%;
 }
 /* d8d8d8 */
+=======
+.card-container {
+  display: inline-block;
+}
+.created-by {
+  color: #ea95b4;
+}
+>>>>>>> 43ca7bf (moved all to frontend folder)

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .contact-container {
   max-width: 1170px;
   margin-left: auto;
@@ -120,4 +121,42 @@ ul {
   .brand {
     text-align: left;
   }
+=======
+input,
+select {
+  width: 100%;
+  padding: 18px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+input[type='submit'] {
+  width: 100%;
+  background-color: #e13969a7;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: #e13969;
+}
+.contact-form {
+  margin: 5%;
+  padding: 1% 5%;
+}
+.contact-container {
+  display: inline-block;
+  width: 100%;
+}
+.contact-details {
+  width: 50%;
+  display: inline-block;
+>>>>>>> 43ca7bf (moved all to frontend folder)
 }
