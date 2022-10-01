@@ -6,309 +6,228 @@ const Resume = () => {
                <div >
                     <h1 className='heading'>Check My Resume </h1>
                     <div className='resume-page'>
-                         <div className="outline">
-                              {/* <div className="top">
-                                   <div className="name">
-                                        <div className="nametxt">Rakesh Peddamallu</div>
-                                   </div>
-                                   <div className="occupation">WEB GRAPHIC DESIGNER</div>
-                              </div> */}
-                              <div className="main">
-                                   <div className="left">
-                                        <div className="myPhoto" />
-                                        <div className="lbox personal">
-                                             <h4>PERSONAL</h4>
-                                             <ul className="list">
-                                                  <li>
-                                                       <span className="listL">Name</span>
-                                                       <span className="listR">Rakesh Peddamallu</span>
-                                                  </li>
-                                                  <li>
-                                                       <span className="listL">Birthday</span>
-                                                       <span className="listR">5th of December</span>
-                                                  </li>
-                                                  <li>
-                                                       <span className="listL">Nationality</span>
-                                                       <span className="listR">Indian</span>
-                                                  </li>
-                                                  <li>
-                                                       <span className="listL">Languages</span>
-                                                       <span className="listR">English, Telugu</span>
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                        <div className="lbox contact">
-                                             <h4>CONTACT</h4>
-                                             <ul className="list">
-                                                  <li>
-                                                       <span className="listL mobile">Mobile</span>
-                                                       <span className="listR">6303665574</span>
-                                                  </li>
-                                                  <li>
-                                                       <span className="listL home">Home</span>
-                                                       <span className="listR">002-1234***</span>
-                                                  </li>
-                                                  <li>
-                                                       <span className="listL email">Email</span>
-                                                       <span className="listR">rose.bid@rose****</span>
-                                                  </li>
-                                                  <li>
-                                                       <span className="listL skype">Skype</span>
-                                                       <span className="listR">ddea*****</span>
-                                                  </li>
-                                                  <li>
-                                                       <span className="listL add">Address</span>
-                                                       <span className="listR">Pulivendula Town , Andhra Pradesh</span>
-                                                  </li>
-                                             </ul>
-                                        </div>
-                                        <div className="lbox links">
-                                             <h4>LINKS</h4>
-                                             <ul className="list">
-                                                  <li>
-                                                       <a href="#">
-                                                            <span className="linkL fb">www.facebook.com</span>
-                                                            <span className="linkR">/dearblythe</span>
-                                                       </a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">
-                                                            <span className="linkL tw">twitter.com</span>
-                                                            <span className="linkR">/dearblythe</span>
-                                                       </a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">
-                                                            <span className="linkL ig">www.instagram.com</span>
-                                                            <span className="linkR">/dearblythe</span>
-                                                       </a>
-                                                  </li>
-                                                  <li>
-                                                       <a href="#">
-                                                            <span className="linkL google">www.google.com</span>
-                                                            <span className="linkR">/dearblythe</span>
-                                                       </a>
-                                                  </li>
-                                                  {/* <li>
-                                                       <a href="#">
-                                                            <span className="linkL pin">www.pinterest.com</span>
-                                                            <span className="linkR">/dearblythe</span>
-                                                       </a>
-                                                  </li> */}
-                                             </ul>
-                                        </div>
-                                   </div>
-                                   {/*     Right */}
-                                   <div className="right">
-                                        {/*       PROFILE */}
-                                        <div className="profile">
-                                             <h4>PROFILE</h4>
-                                             <div className="content">
-                                                  vit untiatqui ut faccabo repudis apernate la cusam quate simus maionse
-                                                  quatur sunt ad qui natet quunt am hicae maxim rem voluptatur
+                         <>
+                              <meta charSet="UTF-8" />
+                              <meta
+                                   name="viewport"
+                                   content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+                              />
+                              <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+                              <title>Responsive CV Beugin Morgane </title>
+                              <link
+                                   rel="stylesheet"
+                                   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+                                   integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+                                   crossOrigin="anonymous"
+                                   referrerPolicy="no-referrer"
+                              />
+                              <link rel="stylesheet" type="text/css" href="style.css" />
+                              <link rel="stylesheet" type="text/css" href="css/data.css" />
+                              <div className="container">
+                                   <div className="left_Side">
+                                        <div className="profileText">
+                                             <div className="imgBx">
+                                                  <img
+                                                       className="photo"
+                                                       src="https://media-exp1.licdn.com/dms/image/C5603AQHmODX27aRpeg/profile-displayphoto-shrink_800_800/0/1657626686762?e=1669852800&v=beta&t=u-wfRdF_0AqFA2CBolQhUhE6KOWkJOrUf89V1eiYTyg"
+                                                  />
                                              </div>
-                                             <div className="subtitle">SPECIALTIES</div>
-                                             <div className="chart">
-                                                  <div className="pie pie_1">
-                                                       <span className="square square1" />
-                                                       <span className="square square0" />
-                                                       <span className="pie_txt">Interaction Design</span>
-                                                  </div>
-                                                  <div className="pie pie_2">
-                                                       <span className="square square1" />
-                                                       <span className="pie_txt">Visual Design</span>
-                                                  </div>
-                                                  <div className="pie pie_3">
-                                                       <span className="square square1" />
-                                                       <span className="square square2" />
-                                                       <span className="pie_txt">Heuristic Design</span>
-                                                  </div>
-                                                  <div className="pie pie_4">
-                                                       <span className="square square1" />
-                                                       <span className="square square3" />
-                                                       <span className="pie_txt">
-                                                            A/B <br />
-                                                            Testing
+                                             <br />
+                                             <h2>
+                                                  Rakesh Peddamallu <br />
+                                                  <span>Software Engineer</span>{" "}
+                                             </h2>
+                                        </div>
+                                        <div className="contactInfo">
+                                             <h3 className="title">Contact Info</h3>
+                                             <ul>
+                                                  <li>
+                                                       <span className="icon">
+                                                            <i className="fa fa-phone" aria-hidden="true" />
                                                        </span>
-                                                  </div>
-                                                  <div className="pie pie_5">
-                                                       <span className="square square1" />
-                                                       <span className="square square4" />
-                                                       <span className="pie_txt">Design Strategy</span>
-                                                  </div>
-                                             </div>
+                                                       <span className="text">
+                                                            <a href="tel:6303665574">6303665574</a>
+                                                       </span>
+                                                  </li>
+                                                  <li>
+                                                       <span className="icon">
+                                                            <i className="fa fa-envelope-o" aria-hidden="true" />
+                                                       </span>
+                                                       <span className="text">
+                                                            <a href="mailto: rpeddamallu@juniper.net">
+                                                                 rpeddamallu@juniper.net
+                                                            </a>
+                                                       </span>
+                                                  </li>
+                                                  <li>
+                                                       <span className="icon">
+                                                            <i className="fa fa-map-marker" aria-hidden="true" />
+                                                       </span>
+                                                       <span className="text">Bangalore, India</span>
+                                                  </li>
+                                             </ul>
                                         </div>
-                                        {/* WORK */}
-                                        <div className="work">
-                                             <h4>WORK</h4>
-                                             <div className="even">
-                                                  <div className="year">2017</div>
-                                                  <div className="arr" />
-                                                  <div className="data">
-                                                       <h6>
-                                                            <div className="point" />
-                                                            DESIGN DIRECTOR
-                                                       </h6>
-                                                       <p>
-                                                            faccabo repudis apernate la cusam quate simus maionse quatur sunt
-                                                            ad qui natet quunt am hicae maxim rem voluptatur
-                                                       </p>
-                                                  </div>
-                                             </div>
-                                             <div className="even">
-                                                  <div className="year">2012</div>
-                                                  <div className="arr" />
-                                                  <div className="data">
-                                                       <h6>
-                                                            <div className="point" />
-                                                            SENIOR DESIGNER
-                                                       </h6>
-                                                       <p>
-                                                            vit untiatqui ut faccabo repudis apernate la cusam quate simus
-                                                            maionse quatur sunt ad qui natet quunt am hicae maxim rem
-                                                            voluptatur Lor
-                                                       </p>
-                                                  </div>
-                                             </div>
-                                             <div className="even">
-                                                  <div className="year">2010</div>
-                                                  <div className="arr" />
-                                                  <div className="data">
-                                                       <h6>
-                                                            <div className="point" />
-                                                            DESIGNER
-                                                       </h6>
-                                                       <p>
-                                                            This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
-                                                            velit auctor aliquet.Aenean sollicitudin, lorem qzuis bibendum
-                                                            auctor
-                                                       </p>
-                                                  </div>
-                                             </div>
-                                             <div className="histogram">
-                                                  <span className="linechart chart_1" />
-                                                  <span className="linechart chart_2" />
-                                                  <span className="linechart chart_3" />
-                                                  <span className="linechart chart_4" />
-                                                  <span className="linechart chart_5" />
-                                             </div>
-                                             <div className="junior">
-                                                  <div className="jtop">Junior Art Director:</div>
-                                                  <div className="jbottom">
-                                                       This is Photoshop's version of Lorem Ipsum. Proin gravida nibh vel
-                                                       velit auctor aliquet. Aenean sollicitudin, lorem qzuis bibendum
-                                                       auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.
-                                                       Duisodio
-                                                  </div>
-                                             </div>
-                                             <div className="bar_box">
-                                                  <div className="bar" />
-                                             </div>
-                                             <div className="bar_txt">50 / 80</div>
-                                             <div className="dot_box">
-                                                  <div className="dot dot_1" />
-                                                  <div className="dot dot_2" />
-                                                  <div className="dot dot_3" />
-                                                  <div className="dot dot_4" />
-                                                  <div className="dot dot_5" />
-                                             </div>
+                                        <div className="contactInfo education">
+                                             <h3 className="title">Education</h3>
+                                             <ul>
+                                                  <li>
+                                                       <h5>2021 - 2023</h5>
+                                                       <br />
+                                                       <h4>Web Bachelor CDUI</h4>
+                                                       <h4>Lycée Saint Vincent de Paul, Le Havre</h4>
+                                                       <br />
+                                                  </li>
+                                                  <li>
+                                                       <h5>2018 - 2021</h5>
+                                                       <br />
+                                                       <h4>Baccalauréat Photographie</h4>
+                                                       <h4>Lycée Saint Vincent de Paul, Le Havre</h4>
+                                                       <br />
+                                                  </li>
+                                                  <li>
+                                                       <h5>2016</h5>
+                                                       <br />
+                                                       <h4>Brevet des Collèges </h4>
+                                                       <h4>Collège Théophile Gautier</h4>
+                                                  </li>
+                                             </ul>
                                         </div>
-                                        {/* SOFTWARW */}
-                                        <div className="softwarw">
-                                             <h4>SOFTWARW</h4>
-                                             <div className="soft_left">
-                                                  <div className="skill skill_1">
-                                                       <div className="softName">Adobe Photoshop</div>
-                                                       <div className="softBar_bg">
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar" />
-                                                            <div className="softBar" />
-                                                       </div>
+                                   </div>
+                                   <div className="right_Side">
+                                        <div className="about">
+                                             <h2 className="title2">Experiences</h2>
+                                             <div className="box">
+                                                  <div className="year_company">
+                                                       <h5>Present</h5>
                                                   </div>
-                                                  <div className="skill skill_3">
-                                                       <div className="softName">Adobe Illustrator</div>
-                                                       <div className="softBar_bg">
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar" />
-                                                            <div className="softBar" />
-                                                       </div>
+                                                  <div className="text">
+                                                       <h4>Desjardins - Hôtesse de caisse</h4>
+                                                       <p>Encaissement, Mise en rayon, Emballage, Étiquetage. </p>
+                                                       <br />
                                                   </div>
-                                                  <div className="skill skill_5">
-                                                       <div className="softName">Adobe Flash</div>
-                                                       <div className="softBar_bg">
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar" />
-                                                       </div>
+                                             </div>
+                                             <div className="box">
+                                                  <div className="year_company">
+                                                       <h5>2021 </h5>
                                                   </div>
-                                                  <div className="skill skill_7">
-                                                       <div className="softName">Adobe Fireworks</div>
-                                                       <div className="softBar_bg">
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar" />
+                                                  <div className="text">
+                                                       <h4>Wow Concept Studio - Stage</h4>
+                                                       <p>Prises de vues commerciales, Retouches de photos.</p>
+                                                       <br />
+                                                  </div>
+                                             </div>
+                                             <div className="box">
+                                                  <div className="year_company">
+                                                       <h5>2020</h5>
+                                                  </div>
+                                                  <div className="text">
+                                                       <h4>Studio Ellipse - Stage</h4>
+                                                       <p>Réalisation de photographies, Assitante shooting vidéo.</p>
+                                                       <br />
+                                                  </div>
+                                             </div>
+                                             <div className="box">
+                                                  <div className="year_company">
+                                                       <h5>2019</h5>
+                                                  </div>
+                                                  <div className="text">
+                                                       <h4>Dominique Côté Photographie - Stage</h4>
+                                                       <p>
+                                                            Assistante studio, Shooting photo, Tenue d'un stand
+                                                            photographique.
+                                                       </p>
+                                                       <br />
+                                                  </div>
+                                             </div>
+                                             <div className="box">
+                                                  <div className="year_company">
+                                                       <h5>2016</h5>
+                                                  </div>
+                                                  <div className="box">
+                                                       <div className="text">
+                                                            <h4>Boulangerie Rolleville -</h4>
+                                                            <p>Tenue d'une caisse, Mise en rayon, Encaissement.</p>
+                                                            <br />
                                                        </div>
                                                   </div>
                                              </div>
-                                             {/*          */}
-                                             <div className="soft_right">
-                                                  <div className="skill skill_2">
-                                                       <div className="softName">Adobe Dreamweaver</div>
-                                                       <div className="softBar_bg">
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar" />
+                                             <div className="about skills">
+                                                  <h2 className="title2">Compétences</h2>
+                                                  <div className="box">
+                                                       <h4>Photoshop</h4>
+                                                       <div className="percent">
+                                                            <div className="htmlws30" />
                                                        </div>
                                                   </div>
-                                                  <div className="skill skill_4">
-                                                       <div className="softName">HTML5</div>
-                                                       <div className="softBar_bg">
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar" />
+                                                  <div className="box">
+                                                       <h4>Lightroom</h4>
+                                                       <div className="percent">
+                                                            <div className="cssws45" />
                                                        </div>
                                                   </div>
-                                                  <div className="skill skill_6">
-                                                       <div className="softName">CSS3</div>
-                                                       <div className="softBar_bg">
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar black" />
-                                                            <div className="softBar" />
+                                                  <div className="box">
+                                                       <h4>Indesign</h4>
+                                                       <div className="percent">
+                                                            <div className="jsws70" />
+                                                       </div>
+                                                  </div>
+                                                  <div className="box">
+                                                       <h4>Illustrator</h4>
+                                                       <div className="percent">
+                                                            <div className="phws40" />
+                                                       </div>
+                                                  </div>
+                                                  <div className="box">
+                                                       <h4>After Effect</h4>
+                                                       <div className="percent">
+                                                            <div className="ilws60" />
+                                                       </div>
+                                                  </div>
+                                                  <div className="box">
+                                                       <h4>Premiere Pro</h4>
+                                                       <div className="percent">
+                                                            <div className="adw70" />
+                                                       </div>
+                                                  </div>
+                                                  <div className="box">
+                                                       <h4>Vs code</h4>
+                                                       <div className="percent">
+                                                            <div className="adw80" />
                                                        </div>
                                                   </div>
                                              </div>
-                                        </div>
-                                        {/* HOBBIES */}
-                                        <div className="hobbies">
-                                             <h4>HOBBIES</h4>
-                                             <div className="hobb hobb_2">
-                                                  <div className="hobb_icon" />
-                                                  <div className="hobb_txt">MOVIES</div>
-                                             </div>
-                                             <div className="hobb hobb_3">
-                                                  <div className="hobb_icon" />
-                                                  <div className="hobb_txt">TV SERIES</div>
-                                             </div>
-                                             <div className="hobb hobb_4">
-                                                  <div className="hobb_icon" />
-                                                  <div className="hobb_txt">READING</div>
-                                             </div>
-                                             <div className="hobb hobb_6">
-                                                  <div className="hobb_icon" />
-                                                  <div className="hobb_txt">GAMING</div>
+                                             <div className="about interest">
+                                                  <h2 className="title2">Loisirs</h2>
+                                                  <ul>
+                                                       <li>
+                                                            <img
+                                                                 className="imagebillard"
+                                                                 src="https://zupimages.net/up/21/49/b1y7.png"
+                                                                 alt="Billardimage"
+                                                            />
+                                                            Billard
+                                                       </li>
+                                                       <li>
+                                                            <img
+                                                                 className="horseimage"
+                                                                 src="https://zupimages.net/up/21/49/4waa.png"
+                                                                 alt="horseimage"
+                                                            />{" "}
+                                                            Equitation{" "}
+                                                       </li>
+                                                       <li>
+                                                            <i className="fa fa-paw" aria-hidden="true" /> Animaux
+                                                       </li>
+                                                       <li>
+                                                            <i className="fa fa-camera" aria-hidden="true" /> Photographie
+                                                       </li>
+                                                  </ul>
                                              </div>
                                         </div>
                                    </div>
                               </div>
-                              <div className="bottom" />
-                         </div>
+                         </>
+
 
                     </div>
                </div>
