@@ -23,7 +23,14 @@ module.exports = {
       },
       {
         test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
-        type: 'asset/resource',
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+            },
+          },
+        ],
       },
       {
         test: /\.(woff(2)?|eot|ttf|otf|svg|)$/,
