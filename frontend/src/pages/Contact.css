@@ -11,7 +11,7 @@ select {
 
 input[type='submit'] {
   width: 100%;
-  background-color: #e13969a7;
+  background-color: #031993f0;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -21,7 +21,7 @@ input[type='submit'] {
 }
 
 input[type='submit']:hover {
-  background-color: #e13969;
+  background-color: #031893;
 }
 .contact-form {
   margin: 5%;

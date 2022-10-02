@@ -18,8 +18,8 @@
 }
 
 .button:hover {
-  background-color: #da7ea3;
-  box-shadow: 0px 15px 20px #daa1b8;
+  background-color: #031893;
+  box-shadow: 0px 15px 20px #031993bd;
   color: #fff;
   transform: translateY(-7px);
 }
