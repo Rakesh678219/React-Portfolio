@@ -5,12 +5,11 @@
   background-size: cover;
 }
 .my-details {
-  padding: 50px 80px 50px;
+  padding: 5% 10% 5%;
   border-radius: 20px;
   background-color: #fff;
 }
 .about-me-page {
-  padding: 30px 30px 30px;
   background-color: #181818;
   color: #ffffff;
 }

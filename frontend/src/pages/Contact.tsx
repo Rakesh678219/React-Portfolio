@@ -48,18 +48,54 @@ const Contact = () => {
      }
      return (
           <>
-               <div className="contact-container">
-                    <div className="contact-form">
-                         <h1 className="heading">Contact me</h1>
-                         <form method="POST" >
-                              <input type="text" id="name" name="name" placeholder="Enter your full name" onChange={handleInputChange} />
-                              <input type="number" id="phno" name="phno" placeholder="Enter your phone number" onChange={handleInputChange} />
-                              <input type="email" id="email" name="email" placeholder="Enter your e-mail " onChange={handleInputChange} />
-                              <input style={{ height: '100px' }} type="description" id="message" name="message" placeholder="Type your message" onChange={handleInputChange} />
-                              <input type="submit" value="Submit" onChange={handleSubmit} />
-                         </form>
+               <>
+                    <div className="contact-container">
+                         <div className="contact-header" style={{ height: '200px', marginTop: '50px' }}>
+
+                         </div>
+                         <div className="wrapper">
+                              <div className="company-info">
+                                   <h3>Rakesh Peddamallu</h3>
+                                   <ul>
+                                        <li>
+                                             <i className="fa fa-road" /> Bangalore
+                                        </li>
+                                        <li>
+                                             <i className="fa fa-phone" /> (+91) 6303665574
+                                        </li>
+                                        <li>
+                                             <i className="fa fa-envelope" /> https://rakeshpeddamallu.netlify.app/
+                                        </li>
+                                   </ul>
+                              </div>
+                              <div className="contact">
+                                   <h3>E-mail Me</h3>
+                                   <form id="contact-form">
+                                        <p>
+                                             <label>Name</label>
+                                             <input type="text" name="name" id="name" />
+                                        </p>
+                                        <p>
+                                             <label>E-mail Address</label>
+                                             <input type="email" name="email" id="email" />
+                                        </p>
+                                        <p>
+                                             <label>Phone Number</label>
+                                             <input type="text" name="phone" id="phone" />
+                                        </p>
+                                        <p className="full">
+                                             <label>Message</label>
+                                             <textarea name="message" rows={5} id="message" defaultValue={""} />
+                                        </p>
+                                        <p className="full">
+                                             <button type="submit">Submit</button>
+                                        </p>
+                                   </form>
+                              </div>
+                         </div>
                     </div>
-               </div>
+               </>
+
           </>
      )
 }
