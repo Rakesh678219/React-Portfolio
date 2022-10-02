@@ -22,10 +22,16 @@ const projectsRouter = require('./routes/projects')
 
 app.use('/projects', projectsRouter)
 
-//import routes for projects
+//import routes for posts
 const postsRouter = require('./routes/posts')
 
 app.use('/posts', postsRouter)
+
+//import routes for messages
+
+const messagesRouter = require('./routes/messages')
+
+app.use('/messages', messagesRouter)
 
 //connect to db
 mongoose.connect(process.env.DB_CONNECTION, () => {
