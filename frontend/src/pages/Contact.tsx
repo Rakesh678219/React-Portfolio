@@ -68,7 +68,7 @@ const Contact = () => {
                                         </li>
                                    </ul>
                               </div>
-                              <div className="contact-me">
+                              <div className="contact">
                                    <h3>E-mail Me</h3>
                                    <form id="contact-form">
                                         <p>
