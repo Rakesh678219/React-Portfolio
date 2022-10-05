@@ -7,7 +7,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: #031893;
+  color: #fff;
   padding-bottom: 32px;
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
@@ -124,6 +125,7 @@ u:hover {
 
   .name {
     padding-bottom: 40px;
+    background-color: #031893 !important;
   }
 
   .section {
@@ -138,6 +140,7 @@ u:hover {
 
   .name {
     padding-bottom: 40px;
+    background-color: #031893 !important;
   }
 
   .title {
@@ -198,5 +201,9 @@ u:hover {
   .btn {
     font-size: 11pt;
     height: 40px;
+  }
+  .name {
+    padding-bottom: 40px;
+    background-color: #031893 !important;
   }
 }
