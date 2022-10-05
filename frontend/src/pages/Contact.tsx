@@ -68,7 +68,7 @@ const Contact = () => {
                                         </li>
                                    </ul>
                               </div>
-                              <div className="contact">
+                              <div className="contact-me">
                                    <h3>E-mail Me</h3>
                                    <form id="contact-form">
                                         <p>
@@ -85,7 +85,8 @@ const Contact = () => {
                                         </p>
                                         <p className="full">
                                              <label>Message</label>
-                                             <textarea name="message" rows={5} id="message" defaultValue={""} />
+                                             <input type="text" name="message" id="message" />
+
                                         </p>
                                         <p className="full">
                                              <button type="submit">Submit</button>
