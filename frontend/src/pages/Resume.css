@@ -7,7 +7,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #031893;
+  background-color: var(--primary);
   color: #fff;
   padding-bottom: 32px;
   border-top-left-radius: 6px;
@@ -104,7 +104,7 @@ u:hover {
   }
 
   .name {
-    background-color: #031893 !important;
+    background-color: var(--primary) !important;
     color: #fff !important;
     padding-bottom: 50px;
   }
@@ -125,7 +125,7 @@ u:hover {
 
   .name {
     padding-bottom: 40px;
-    background-color: #031893 !important;
+    background-color: var(--primary) !important;
   }
 
   .section {
@@ -140,7 +140,7 @@ u:hover {
 
   .name {
     padding-bottom: 40px;
-    background-color: #031893 !important;
+    background-color: var(--primary) !important;
   }
 
   .title {
@@ -204,6 +204,6 @@ u:hover {
   }
   .name {
     padding-bottom: 40px;
-    background-color: #031893 !important;
+    background-color: var(--primary) !important;
   }
 }
