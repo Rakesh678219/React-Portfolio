@@ -3,6 +3,7 @@
 
 :root {
   --primary: #002eac;
+  --secondary: #000209;
 }
 html {
   /* width: 100%; */
@@ -34,7 +35,7 @@ body {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #000209;
+  background-color: var(--secondary);
   text-align: center;
   color: #faf9f6;
 }
@@ -86,7 +87,7 @@ ul.social-icons {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #322f30;
+  background-color: var(--secondary);
 }
 .fa-whatsapp:hover {
   background-color: #04a884;
@@ -98,7 +99,7 @@ ul.social-icons {
   -moz-transition: 0.5s;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background-color: #322f30;
+  background-color: var(--secondary);
 }
 .fa-linkedin:hover {
   background-color: #0073a4;
@@ -120,7 +121,7 @@ ul.social-icons {
 }
 
 footer {
-  background-color: #121315;
+  background-color: var(--secondary);
   color: #a7a7a7;
   font-size: 16px;
   width: 100%;

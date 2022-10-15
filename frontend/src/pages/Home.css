@@ -7,7 +7,7 @@
 .my-details {
   padding: 5% 10% 5%;
   border-radius: 20px;
-  background-color: #000000e9;
+  background-color: #000000e1;
   color: #fff;
 }
 .about-me-page {
@@ -24,15 +24,15 @@
 .split-div2 p {
 }
 .split-div2 {
+  background-color: var(--secondary);
   color: rgb(131, 131, 131);
   font-size: 19px;
   line-height: 25px;
 }
 
 .my-details h1 {
-  font-size: 2em;
+  font-size: 30px;
   color: white;
-  min-width: 723px;
   font-family: sans-serif;
   font-weight: lighter;
   letter-spacing: 2px;
