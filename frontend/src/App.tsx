@@ -11,6 +11,8 @@ import Blog from './pages/Blog'
 import Portfolio from './pages/Portfolio'
 import { useState, useEffect } from 'react'
 import Loading from './components/Loading'
+import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+
 export const App = () => {
   const [loading, setLoading] = useState(false);
   useEffect(() => {
@@ -22,35 +24,37 @@ export const App = () => {
   return (
     <>
 
-      <Navbar />
-      {
-        loading ?
-          <Loading />
-          : <body>
-            <div className="body">
-              <Router>
-                <Routes>
-                  <Route path="/" element={<Home />} />
-                  <Route path="/about" element={<About />} />
-                  <Route path="/contact" element={<Contact />} />
-                  <Route path="/projects" element={<Projects />} />
-                  <Route path="/blog" element={<Blog />} />
-                  <Route path="/resume" element={<Resume />} />
-                  <Route path="/portfolio" element={<Portfolio />} />
-                </Routes>
-              </Router>
-            </div>
-          </body>
-      }
+      <SkeletonTheme baseColor="#202020" highlightColor="#444">
+        <Navbar />
+        {
+          loading ?
+            <Loading />
+            : <body>
+              <div className="body">
+                <Router>
+                  <Routes>
+                    <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
+                    <Route path="/contact" element={<Contact />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="/blog" element={<Blog />} />
+                    <Route path="/resume" element={<Resume />} />
+                    <Route path="/portfolio" element={<Portfolio />} />
+                  </Routes>
+                </Router>
+              </div>
+            </body>
+        }
+        <footer>
+          <div className="footer row primary">
+            <span style={{ textAlign: 'center' }}>
+              <p> All Rights Reserved</p>
+            </span>
+          </div>
+        </footer>
+      </SkeletonTheme>
 
 
-      <footer>
-        <div className="footer row primary">
-          <span style={{ textAlign: 'center' }}>
-            <p> All Rights Reserved</p>
-          </span>
-        </div>
-      </footer>
     </>
   )
 }
