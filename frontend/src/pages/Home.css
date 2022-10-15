@@ -25,9 +25,10 @@
 }
 .split-div2 {
   background-color: var(--secondary);
-  color: rgb(131, 131, 131);
+  color: var(--tertiary);
   font-size: 19px;
   line-height: 25px;
+  padding: 25px;
 }
 
 .my-details h1 {

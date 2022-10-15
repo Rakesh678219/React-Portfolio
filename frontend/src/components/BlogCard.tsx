@@ -4,7 +4,7 @@ import './BlogCard.css'
 import LongButton from './LongButton'
 const BlogCard = (props: any) => {
      return (
-          <div className="card-container">
+          <div className="blog-card-container">
                <img src={props.img} alt="" />
                <small>By <strong className="created-by">{props.createdBy}</strong> | {props.createdAt}</small>
                <h3 className="sub-heading">{props.title}</h3>

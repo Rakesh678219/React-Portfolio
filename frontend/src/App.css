@@ -4,6 +4,7 @@
 :root {
   --primary: #002eac;
   --secondary: #000209;
+  --tertiary: #d8d8d8;
 }
 html {
   /* width: 100%; */
