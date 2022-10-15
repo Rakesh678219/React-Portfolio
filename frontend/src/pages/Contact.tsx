@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Button from '../components/Button'
+import LongButton from '../components/LongButton'
 import './Contact.css'
 const Contact = () => {
 
@@ -89,7 +90,7 @@ const Contact = () => {
 
                                         </p>
                                         <p className="full">
-                                             <button type="submit">Submit</button>
+                                             <LongButton title={'Submit'} />
                                         </p>
                                    </form>
                               </div>

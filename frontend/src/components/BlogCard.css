@@ -2,5 +2,9 @@
   display: inline-block;
 }
 .created-by {
-  color: #031893;
+  color: var(--primary);
+}
+
+.card-container img {
+  max-width: 100%;
 }

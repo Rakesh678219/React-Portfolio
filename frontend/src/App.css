@@ -154,16 +154,10 @@ li:not(:first-child) {
 
 input,
 button {
-  font-size: 1em;
   padding: 1em;
   width: 100%;
-  border-radius: 5px;
-  margin-bottom: 5px;
 }
-button {
-  background-color: var(--primary);
-  color: #ffffff;
-}
+
 .heading {
   text-align: center;
   color: #333333;

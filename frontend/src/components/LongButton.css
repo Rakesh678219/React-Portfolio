@@ -1,0 +1,13 @@
+.long-btn button {
+  background-color: var(--primary);
+  color: #fff;
+  border: 0px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.long-btn button:hover {
+  background-color: #002eace3;
+  cursor: pointer;
+}
