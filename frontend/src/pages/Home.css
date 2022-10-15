@@ -7,7 +7,8 @@
 .my-details {
   padding: 5% 10% 5%;
   border-radius: 20px;
-  background-color: #fff;
+  background-color: #000000e9;
+  color: #fff;
 }
 .about-me-page {
   background-color: #181818;
@@ -26,4 +27,28 @@
   color: rgb(131, 131, 131);
   font-size: 19px;
   line-height: 25px;
+}
+
+.my-details h1 {
+  font-size: 2em;
+  color: white;
+  min-width: 723px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  /* background: linear-gradient(90deg, black, white, black); */
+  background: linear-gradient(90deg, var(--primary), white, var(--primary));
+  animation: animate 7s linear infinite;
+  background-size: 90%;
+  /*background-repeat:no-repeat;*/
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes animate {
+  from {
+    background-position: -1000%;
+  }
+  to {
+    background-position: 1000%;
+  }
 }
