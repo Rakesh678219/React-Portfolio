@@ -25,13 +25,13 @@ export const App = () => {
     <>
 
       <SkeletonTheme baseColor="#202020" highlightColor="#444">
-        <Navbar />
-        {
-          loading ?
-            <Loading />
-            : <body>
-              <div className="body">
-                <Router>
+        <Router>
+          <Navbar />
+          {
+            loading ?
+              <Loading />
+              : <body>
+                <div className="body">
                   <Routes>
                     <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
@@ -41,10 +41,10 @@ export const App = () => {
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/portfolio" element={<Portfolio />} />
                   </Routes>
-                </Router>
-              </div>
-            </body>
-        }
+                </div>
+              </body>
+          }
+        </Router>
         <footer>
           <div className="footer row primary">
             <span style={{ textAlign: 'center' }}>
@@ -53,8 +53,6 @@ export const App = () => {
           </div>
         </footer>
       </SkeletonTheme>
-
-
     </>
   )
 }
