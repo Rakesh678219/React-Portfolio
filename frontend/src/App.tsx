@@ -15,6 +15,7 @@ import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
 import BlogDetails from './pages/BlogDetails'
 import ErrorPage from './pages/ErrorPage'
 import ProjectDetails from './pages/ProjectDetails'
+import Footer from './Footer/Footer'
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
@@ -33,31 +34,32 @@ export const App = () => {
           {
             loading ?
               <Loading />
-              : <body>
-                <div className="body">
-                  <Routes>
-                    <Route path="/" element={<Home />} />
-                    <Route path="/about" element={<About />} />
-                    <Route path="/contact" element={<Contact />} />
-                    <Route path="/projects" element={<Projects />} />
-                    <Route path="/projects/:id" element={<ProjectDetails />} />
-                    <Route path="/blog" element={<Blog />} />
-                    <Route path="/blog/:id" element={<BlogDetails />} />
-                    <Route path="/resume" element={<Resume />} />
-                    <Route path="/portfolio" element={<Portfolio />} />
-                    <Route path="*" element={<ErrorPage />} />
-                  </Routes>
-                </div>
-              </body>
+              :
+              <>
+                <body>
+                  <div className="body">
+                    <Routes>
+                      <Route path="/" element={<Home />} />
+                      <Route path="/about" element={<About />} />
+                      <Route path="/contact" element={<Contact />} />
+                      <Route path="/projects" element={<Projects />} />
+                      <Route path="/projects/:id" element={<ProjectDetails />} />
+                      <Route path="/blog" element={<Blog />} />
+                      <Route path="/blog/:id" element={<BlogDetails />} />
+                      <Route path="/resume" element={<Resume />} />
+                      <Route path="/portfolio" element={<Portfolio />} />
+                      <Route path="*" element={<ErrorPage />} />
+                    </Routes>
+                  </div>
+                </body>
+                <footer>
+                  <Footer />
+                </footer>
+              </>
+
+
           }
         </Router>
-        <footer>
-          <div className="footer row primary">
-            <span style={{ textAlign: 'center' }}>
-              <p> All Rights Reserved</p>
-            </span>
-          </div>
-        </footer>
       </SkeletonTheme>
     </>
   )
