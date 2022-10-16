@@ -3,13 +3,6 @@ fieldset {
   border: none;
 }
 
-*,
-*:after,
-*:before {
-  box-sizing: border-box;
-  flex: 1 0 auto;
-}
-
 hr {
   display: none;
 }
