@@ -1,7 +1,9 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 import Button from '../components/Button'
 import './Home.css'
 const Home = () => {
+     let navigate = useNavigate()
      return (
           <>
                <div className='home-page'>
@@ -10,7 +12,7 @@ const Home = () => {
                          <p>
                               Professional web developer based in Bangalore
                          </p>
-                         <Button title={'Hire me'}></Button>
+                         <Button onClick={() => navigate("/contact")} title={'Hire me'}  ></Button>
                     </div>
                </div>
                <div className='about-me-page'>

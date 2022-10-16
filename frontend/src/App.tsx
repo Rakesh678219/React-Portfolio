@@ -12,6 +12,9 @@ import Portfolio from './pages/Portfolio'
 import { useState, useEffect } from 'react'
 import Loading from './components/Loading'
 import Skeleton, { SkeletonTheme } from 'react-loading-skeleton'
+import BlogDetails from './pages/BlogDetails'
+import ErrorPage from './pages/ErrorPage'
+import ProjectDetails from './pages/ProjectDetails'
 
 export const App = () => {
   const [loading, setLoading] = useState(false);
@@ -37,9 +40,12 @@ export const App = () => {
                     <Route path="/about" element={<About />} />
                     <Route path="/contact" element={<Contact />} />
                     <Route path="/projects" element={<Projects />} />
+                    <Route path="/projects/:id" element={<ProjectDetails />} />
                     <Route path="/blog" element={<Blog />} />
+                    <Route path="/blog/:id" element={<BlogDetails />} />
                     <Route path="/resume" element={<Resume />} />
                     <Route path="/portfolio" element={<Portfolio />} />
+                    <Route path="*" element={<ErrorPage />} />
                   </Routes>
                 </div>
               </body>

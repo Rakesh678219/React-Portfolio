@@ -3,7 +3,7 @@ import './LongButton.css'
 const LongButton = (props: any) => {
      return (
           <div className="long-btn">
-               <button >{props.title}</button>
+               <button onClick={() => props.onClick()}>{props.title}</button>
           </div>
      )
 }

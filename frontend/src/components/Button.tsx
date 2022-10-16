@@ -3,7 +3,7 @@ import './Button.css'
 const Button = (props: any) => {
      return (
           <div className="wrap">
-               <button className="button">{props.title}</button>
+               <button onClick={() => props.onClick()} className="button">{props.title} </button>
           </div>
      )
 }
