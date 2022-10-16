@@ -71,7 +71,7 @@ ul {
   width: 100%;
   padding: 1em;
   border: solid 1px #031893;
-  border-radius: 4px;
+  border-radius: 2px;
 }
 
 .contact form textarea {
@@ -110,11 +110,11 @@ ul {
   }
 
   .company-info {
-    border-radius: 4px 0 0 4px;
+    border-radius: 2px 0 0 2px;
   }
 
   .contact {
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 2px 2px 0;
   }
 
   .company-info h3,

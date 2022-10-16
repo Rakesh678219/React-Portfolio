@@ -12,7 +12,7 @@
 
 .auto-grid-blog li {
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 2px;
 }
 
 @media only screen and (max-width: 350px) {

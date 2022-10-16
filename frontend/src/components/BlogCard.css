@@ -2,7 +2,7 @@
   display: inline-block;
   background-color: var(--tertiary);
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 2px;
 }
 .created-by {
   color: var(--primary);
