@@ -1,12 +1,14 @@
 import React from 'react'
 
-import { useParams } from 'react-router-dom'
+import { useLocation, useParams } from 'react-router-dom'
 const BlogDetails = () => {
      const { id } = useParams();
-
+     const { state } = useLocation();
+     const { title } = state;
      return (
           <div>
-               <h1>Blog Details for : {id}</h1>
+               <h3>title : {title}</h3>
+               <h3>Blog Details for : {id}</h3>
 
           </div>
      )

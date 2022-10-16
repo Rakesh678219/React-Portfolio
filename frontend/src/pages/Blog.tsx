@@ -13,7 +13,12 @@ const Blog = () => {
                <div className='blog-page'>
                     <h1 className='heading'>FROM THE BLOG</h1>
                     <ul className="auto-grid-blog">
-                         <li> <BlogCard title={'Blog 1'} img={require('../images/test.jpg')} content={text} createdBy={'rakesh peddamallu'} createdAt={'October 25, 2018'} onClick={() => navigate("/blog/1")} /></li>
+                         <li>
+                              <BlogCard title={'Blog 1'} img={require('../images/test.jpg')} content={text} createdBy={'rakesh peddamallu'} createdAt={'October 25, 2018'} onClick={() => navigate("/blog/1", {
+                                   state: { id: 1, title: "BLOG 1" }
+                              }
+                              )} />
+                         </li>
                          <li> <BlogCard title={'Blog 2'} img={require('../images/bg-7.jpg')} content={text} onClick={() => navigate("/blog/1")} /></li>
                          <li> <BlogCard title={'Blog 3'} img={require('../images/bg-11.jpg')} content={text} onClick={() => navigate("/blog/2")} /></li>
                          <li> <BlogCard title={'Blog 4'} img={require('../images/bg-3.jpg')} content={text} onClick={() => navigate("/blog/3")} /></li>

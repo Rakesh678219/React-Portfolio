@@ -69,7 +69,7 @@ const Footer = () => {
                          {/* .links */}
                     </section>
 
-                    <form action="#" className="newsletterSignup" method="post">
+                    {/* <form action="#" className="newsletterSignup" method="post">
                          <h2>Newsletter</h2>
                          <fieldset>
                               <label>
@@ -80,9 +80,7 @@ const Footer = () => {
                               </label>
                               <LongButton title={'Subscribe'} />
                          </fieldset>
-                         {/* .newsLetterSignup */}
-                    </form>
-                    {/* footerExtras */}
+                    </form> */}
                </div>
           </>
      )
