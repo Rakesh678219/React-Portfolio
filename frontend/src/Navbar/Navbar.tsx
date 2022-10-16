@@ -21,6 +21,8 @@ const Navbar = () => {
                     <Link to="/resume"> Resume</Link>
                     <Link to="/blog">Blog</Link>
                     <Link to="/contact">Contact</Link>
+                    <Link to="javascript:void(0);" className="icon" onClick={myFunction}>
+                         <i className="fa fa-bars"></i> </Link>
                </nav>
           </div>
      )
