@@ -7,6 +7,7 @@ const BlogDetails = () => {
      return (
           <div>
                <h1>Blog Details for : {id}</h1>
+
           </div>
      )
 }
