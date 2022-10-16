@@ -6,8 +6,9 @@ const Blog = () => {
      const text = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil harum corporis eius nesciunt labore pariatur non velit sequi. Maxime quo quis dolorum exercitationem architecto consequatur accusantium assumenda? Quae, quam necessitatibus?'
      return (
           <>
+               <div className="progress-indicator-2"></div>
                <div className='blog-page'>
-                    <h1 className='heading'>From the blog</h1>
+                    <h1 className='heading'>FROM THE BLOG</h1>
                     <ul className="auto-grid-blog">
                          <li> <BlogCard title={'Blog 1'} img={require('../images/test.jpg')} content={text} createdBy={'rakesh peddamallu'} createdAt={'October 25, 2018'} /></li>
                          <li> <BlogCard title={'Blog 2'} img={require('../images/bg-7.jpg')} content={text} /></li>

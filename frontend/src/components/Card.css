@@ -1,3 +1,6 @@
 .card-container {
   display: inline-block;
+  background-color: var(--tertiary);
+  padding: 20px;
+  border-radius: 5px;
 }
