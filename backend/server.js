@@ -34,6 +34,7 @@ const messagesRouter = require('./routes/messages')
 app.use('/messages', messagesRouter)
 
 //connect to db
+// @ts-ignore
 mongoose.connect(process.env.DB_CONNECTION, () => {
   console.log('Connected to MongoDB')
 })

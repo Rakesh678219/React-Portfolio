@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-const MessageSchema = mongoose.Schema({
+const MessageSchema = new mongoose.Schema({
   fullName: {
     type: String,
     required: true,
@@ -11,7 +11,10 @@ const MessageSchema = mongoose.Schema({
   },
   email: {
     type: String,
-    required: true,
+    lowercase: true,
+    unique: true,
+    required: [true, "Email Can't be empty"],
+    match: [/^\S+@\S+\.\S+$/, 'Email is Invalid'],
   },
   message: {
     type: String,
