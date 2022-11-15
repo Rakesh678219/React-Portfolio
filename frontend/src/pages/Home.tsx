@@ -6,7 +6,7 @@ const Home = () => {
      let navigate = useNavigate()
      return (
           <>
-               <div className='home-page'>
+               {/* <div className='home-page'>
                     <div className='my-details'>
                          <h1>Hello, I’m Rakesh Peddamallu</h1>
                          <p>
@@ -14,7 +14,7 @@ const Home = () => {
                          </p>
                          <Button onClick={() => navigate("/contact")} title={'Hire me'}  ></Button>
                     </div>
-               </div>
+               </div> */}
                <div className='about-me-page'>
 
                     <div className='split-div split-div1'>
