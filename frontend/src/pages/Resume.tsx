@@ -8,10 +8,6 @@ const Resume = () => {
                     <div >
                          <div className="container">
                               <div className="name">
-                                   <img
-                                        className="photo"
-                                        src="https://media-exp1.licdn.com/dms/image/C5603AQHmODX27aRpeg/profile-displayphoto-shrink_800_800/0/1657626686762?e=1669852800&v=beta&t=u-wfRdF_0AqFA2CBolQhUhE6KOWkJOrUf89V1eiYTyg"
-                                   />
                                    <h1>Rakesh Peddamallu</h1>
                                    <p className="title">Web Developer</p>
                               </div>
