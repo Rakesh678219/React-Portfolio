@@ -11,7 +11,8 @@
 }
 
 .auto-grid li {
-  border: 1px solid #333333;
+  /* border: 1px solid #333333; */
+  background-image: url('https://cdn.openart.ai/stable_diffusion/7580ef77e6502153a4c8e6b2363638647593de0e_2000x2000.webp');
   padding: 15px;
   border-radius: 10px;
 }
