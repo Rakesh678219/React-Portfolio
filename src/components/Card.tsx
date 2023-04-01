@@ -14,7 +14,7 @@ const Card = (props: any) => {
           <>
                <div className="card-container">
                     <h3 style={{ color: '#fff' }} className="sub-heading">{props.title}</h3>
-                    <img style={{ borderRadius: '10px' }} width="100%" src={props.img} alt="" />
+                    <img style={{ borderRadius: '10px' }} width="100%" height="143px" src={props.img} alt="" />
                     <p style={{ color: '#fff' }} className='text-content'>{props.content.substring(0, 120) + '...'}</p>
                     <Button title={'open'} onClick={props.onClick} />
                </div>
