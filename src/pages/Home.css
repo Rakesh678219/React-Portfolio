@@ -1,7 +1,7 @@
 .home-page {
   padding: 15%;
   height: 1000px;
-  background: url(../../public/wallpaper.webp) no-repeat center center fixed;
+  background: url(../../public/codeWallpaper.jpg) no-repeat center center fixed;
   background-size: cover;
 }
 .my-details {
