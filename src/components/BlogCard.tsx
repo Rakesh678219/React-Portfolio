@@ -3,7 +3,7 @@ import Button from './Button'
 import './BlogCard.css'
 const BlogCard = (props: any) => {
      return (
-          <div className="card-container">
+          <div className="blog-card-container">
                <img width="100%" src={props.img} alt="" />
                <small>By <strong className="created-by">{props.createdBy}</strong> | {props.createdAt}</small>
                <h3 className="sub-heading">{props.title}</h3>

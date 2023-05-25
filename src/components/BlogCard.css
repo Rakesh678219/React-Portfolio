@@ -1,5 +1,8 @@
-.card-container {
+.blog-card-container {
   display: inline-block;
+  background-color: #172855;
+ padding: 25px ;
+ border-radius: 10px;
 }
 .created-by {
   color: #ea95b4;

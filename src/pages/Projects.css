@@ -5,7 +5,7 @@
     auto-fill,
     minmax(var(--auto-grid-min-size), 1fr)
   );
-  grid-gap: 1rem;
+  grid-gap: 2rem;
   margin: 10px 20px 10px 20px;
   padding: 0px 30px 40px 40px;
 }
@@ -15,5 +15,5 @@
   /* background-image: url('https://cdn.openart.ai/stable_diffusion/7580ef77e6502153a4c8e6b2363638647593de0e_2000x2000.webp'); */
   padding: 15px;
   border-radius: 10px;
-  background-color:#181823
+  background-color:#172855
 }
