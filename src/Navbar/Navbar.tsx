@@ -25,7 +25,6 @@ const Navbar = () => {
                <a href="javascript:void(0);" className="icon" onClick={myFunction}>
                     <i className="fa fa-bars"></i>
                </a>
-               <ThemeChanger/>
           </div>
      )
 }
