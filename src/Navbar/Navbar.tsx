@@ -2,6 +2,7 @@ import React from 'react'
 import './Navbar.css'
 import '../App.css'
 import { BrowserRouter as Router } from 'react-router-dom'
+import ThemeChanger from '../components/ThemeChange/ThemeChanger';
 
 function myFunction() {
      var x = document.getElementById("myTopnav") as HTMLInputElement;
@@ -24,6 +25,7 @@ const Navbar = () => {
                <a href="javascript:void(0);" className="icon" onClick={myFunction}>
                     <i className="fa fa-bars"></i>
                </a>
+               <ThemeChanger/>
           </div>
      )
 }
