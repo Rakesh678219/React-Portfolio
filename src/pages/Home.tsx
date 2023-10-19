@@ -34,7 +34,7 @@ const Home = () => {
                 alt=""
               />
               <p className="profession" style={{ marginTop: '50px' }}>
-                As a software engineer with 2 years of experience in Juniper
+                As a software engineer with 1.5 years of experience in Juniper
                 Networks, I have a keen eye for design and a strong
                 understanding of user experience. I have worked on a variety of
                 projects, from designing and implementing new features to
