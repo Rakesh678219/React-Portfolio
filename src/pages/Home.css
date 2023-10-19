@@ -27,6 +27,7 @@
   color: rgb(131, 131, 131);
   font-size: 19px;
   line-height: 25px;
+  padding: 50px;
 }
 .bubbles img {
   width: 50px;
@@ -82,4 +83,40 @@
 .bubbles img:nth-child(7) {
   width: 35px;
   animation-delay: 7s;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+}
+
+.name {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.profession {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 2;
+}
+
+.interest {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 2;
+}
+
+.field,
+.skills,
+.profession-skills,
+.values,
+.beliefs,
+.goals,
+.commitments,
+.strengths {
+  font-size: 24px;
+  margin-bottom: 20px;
+  line-height: 2;
 }
