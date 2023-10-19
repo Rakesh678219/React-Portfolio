@@ -16,28 +16,48 @@ const Home = () => {
         <div className="split-div split-div2">
           <div className="profile">
             <h1 className="name">Rakesh Peddamallu</h1>
-            <p className="profession">
-              As a software engineer with 2 years of experience in Juniper
-              Networks, I have a keen eye for design and a strong understanding
-              of user experience. I have worked on a variety of projects, from
-              designing and implementing new features to troubleshooting and
-              resolving issues. In my role as a frontend engineer, I am
-              responsible for designing and implementing user interfaces that
-              are intuitive, visually appealing, and easy to use. I work closely
-              with the design team to ensure that the user experience is
-              consistent across all platforms and devices. Some of the projects
-              I have worked on include: Developing a new user interface for a
-              network management tool that is intuitive and easy to navigate.
-              Creating a new design for a mobile app that is visually appealing
-              and easy to use on smaller screens. Fixing bugs and issues in
-              existing software that are affecting the user experience.
-              Conducting user research to gather feedback and insights on how to
-              improve the user experience. Overall, my experience as a frontend
-              engineer has taught me the importance of user experience and the
-              value of designing intuitive and visually appealing interfaces. I
-              am excited to continue working on projects that challenge me and
-              push me to deliver high-quality work.
-            </p>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'row',
+                marginBottom: '10px',
+              }}
+            >
+              <img
+                style={{
+                  borderRadius: '10px',
+                  marginTop: '50px',
+                  marginRight: '50px',
+                }}
+                width={'30%'}
+                src="https://media.licdn.com/dms/image/D5603AQHMVff0bRQrbg/profile-displayphoto-shrink_800_800/0/1681009155987?e=1703116800&v=beta&t=DaWGykViNobcM6M-1QZSgyGE1-4wuKCJUP0cn3sXEuE"
+                alt=""
+              />
+              <p className="profession" style={{ marginTop: '50px' }}>
+                As a software engineer with 2 years of experience in Juniper
+                Networks, I have a keen eye for design and a strong
+                understanding of user experience. I have worked on a variety of
+                projects, from designing and implementing new features to
+                troubleshooting and resolving issues. In my role as a frontend
+                engineer, I am responsible for designing and implementing user
+                interfaces that are intuitive, visually appealing, and easy to
+                use. I work closely with the design team to ensure that the user
+                experience is consistent across all platforms and devices. Some
+                of the projects I have worked on include: Developing a new user
+                interface for a network management tool that is intuitive and
+                easy to navigate. Creating a new design for a mobile app that is
+                visually appealing and easy to use on smaller screens. Fixing
+                bugs and issues in existing software that are affecting the user
+                experience. Conducting user research to gather feedback and
+                insights on how to improve the user experience. Overall, my
+                experience as a frontend engineer has taught me the importance
+                of user experience and the value of designing intuitive and
+                visually appealing interfaces. I am excited to continue working
+                on projects that challenge me and push me to deliver
+                high-quality work.
+              </p>
+            </div>
+
             <h1 className="name">Interests</h1>
             <p className="interest">
               Travel: Whether it's hiking in the mountains, exploring a new
