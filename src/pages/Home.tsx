@@ -15,7 +15,7 @@ const Home = () => {
         <div className="split-div split-div1"></div>
         <div className="split-div split-div2">
           <div className="profile">
-            <h1 className="name">Rakesh Peddamallu</h1>
+            <h1 className="name">About me</h1>
             <div
               style={{
                 display: 'flex',
