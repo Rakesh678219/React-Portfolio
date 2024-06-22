@@ -81,7 +81,7 @@ const Blog = () => {
                 title={blog.title}
                 img={
                   blog.cover_image ??
-                  'https://repository-images.githubusercontent.com/408927712/1c5ce46e-266f-43f0-b543-75bf341239b5'
+                  'https://workablehr.s3.amazonaws.com/uploads/account/open_graph_logo/604858/social?1687549873000'
                 }
                 content={blog.description}
                 createdBy={blog.user.username} // You may add createdBy and createdAt props if needed
