@@ -8,6 +8,7 @@ import Projects from './pages/Projects'
 import Resume from './pages/Resume'
 import Home from './pages/Home'
 import Blog from './pages/Blog'
+import BlogPost from './pages/BlogPost'
 import Portfolio from './pages/Portfolio'
 import { useState, useEffect } from 'react'
 import Loading from './components/Loading'
@@ -34,6 +35,7 @@ export const App = () => {
                 <Route path="/contact" element={<Contact />} />
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/blog" element={<Blog />} />
+                <Route path="/blog/:slug" element={<BlogPost />} />
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/portfolio" element={<Portfolio />} />
               </Routes>
