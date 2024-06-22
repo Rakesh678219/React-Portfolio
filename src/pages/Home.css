@@ -6,10 +6,11 @@
   justify-content: center;
   align-items: center;
   height: 100vh; /* Occupies full viewport height */
+  border-bottom: 1px solid #ffff;
 }
 
 .my-details {
-  padding: 30px;
+  padding: 150px;
   background-color: #ffffff; /* Whitish background */
   color: #333333; /* Dark text color */
   text-align: left;
@@ -55,7 +56,7 @@
 /* About Me Section */
 .about-me-page {
   padding: 50px;
-  background-color: #272732; /* Adjusted secondary dark color */
+  /* background-color: #272732; */
   color: #ffffff;
 }
 

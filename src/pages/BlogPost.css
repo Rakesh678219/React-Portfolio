@@ -1,51 +1,48 @@
-/* BlogPost.css */
 .blog-post-container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  background-color: #fff;
+  background-color: #20202b; /* Dark background */
+  color: #fff; /* Light text color */
   border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .blog-post-title {
   font-size: 2rem;
   margin-bottom: 10px;
+  color: #fff; /* Inherit light text color */
 }
 
 .blog-post-meta {
   display: flex;
   justify-content: space-between;
   margin-bottom: 10px;
-  color: #555;
+  color: #ccc; /* Lighter gray for meta information */
 }
 
-.publish-date {
-  font-size: 0.9rem;
-  color: orange; /* Orange color for date */
-}
-
+.publish-date,
 .reading-time {
   font-size: 0.9rem;
-  color: orange; /* Orange color for reading time */
+  color: orange; /* Orange color for date and reading time */
 }
 
 .markdown-body {
   line-height: 1.6;
   font-size: 1.1rem;
-  color: #333;
+  color: #ddd; /* Lighter text color */
   text-align: left;
-  word-wrap: break-word; /* Ensure long words break instead of overflow */
+  word-wrap: break-word;
 }
 
 .markdown-body a {
-  color: blue; /* Blue color for links */
+  color: #4ea3f0; /* Light blue color for links */
 }
 
 .markdown-body pre {
-  white-space: pre-wrap; /* Preserve formatting within <pre> blocks */
-  overflow-x: auto; /* Enable horizontal scrolling if needed */
-  background-color: #f0f0f0; /* Example background color for code blocks */
+  white-space: pre-wrap;
+  overflow-x: auto;
+  background-color: #282c34; /* Darker background for code blocks */
+  color: #ccc; /* Lighter text color for code blocks */
   padding: 10px;
   border-radius: 5px;
   margin-bottom: 15px;
@@ -61,11 +58,13 @@
 .published-by {
   margin-top: 20px;
   font-style: italic;
-  color: #777;
+  color: #999; /* Light gray for published by */
   text-align: left;
 }
 
 .loading {
   text-align: center;
   padding: 20px;
+  color: #ccc; /* Lighter gray for loading text */
 }
+

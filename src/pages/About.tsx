@@ -4,7 +4,7 @@ import logo from '../images/myImage2.png'
 
 const About = () => {
   return (
-    <>
+    <div style={{ padding: '10px' }}>
       <h1 className="heading">About Me</h1>
       <div className="about-container">
         <img className="about-image" src={logo} alt="Web Developer" />
@@ -23,7 +23,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

@@ -1,7 +1,7 @@
 .blog-card-container {
   display: flex;
   flex-direction: column;
-  background-color: #181823;
+  background-color: #fff;
   padding: 25px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow */
@@ -27,11 +27,11 @@
 }
 
 .sub-heading {
-  color: #ffffff; /* White color for heading */
+  color: #000; /* White color for heading */
   margin-top: 10px; /* Adjusted margin for better spacing */
 }
 
 .text-content {
-  color: #ffffff; /* White color for content text */
+  color: #000; /* White color for content text */
   margin-top: 10px; /* Adjusted margin for better spacing */
 }

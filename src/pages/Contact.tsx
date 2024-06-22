@@ -6,7 +6,9 @@ const Contact = () => {
   return (
     <div className="contact-container">
       <div className="contact-form">
-        <h1 className="heading">Contact Me</h1>
+        <h1 className="heading" style={{ color: '#000' }}>
+          Contact Me
+        </h1>
         <form>
           <input
             type="text"
