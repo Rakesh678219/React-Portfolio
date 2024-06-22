@@ -1,17 +1,16 @@
 .heading {
   text-align: center;
   margin-top: 40px;
-  color: #ff8c00; /* Orange as primary color */
+  color: #333333;
+  padding: 10px;
+  margin-left: 10px;
 }
 
 .about-container {
   display: flex;
   align-items: center;
-  justify-content: center;
   padding: 60px 20px;
-  background-color: #181823; /* Secondary dark color */
-  color: #ffffff; /* White text color for contrast */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  color: #000; /* White text color for contrast */
 }
 
 .about-image {
@@ -19,6 +18,7 @@
   height: auto;
   border-radius: 5px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow for image */
+  padding: 10px;
 }
 
 .about-introduction {

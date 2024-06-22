@@ -44,7 +44,7 @@ export const App = () => {
 
       <footer>
         <div className="footer row primary">
-          <span style={{ textAlign: 'center' }}>
+          <span style={{ textAlign: 'center', width: '100vw' }}>
             <p> All Rights Reserved</p>
           </span>
         </div>

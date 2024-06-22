@@ -19,13 +19,15 @@ html {
   justify-content: space-between;
   align-items: center;
   margin-bottom: 20px;
-  padding: 0 20px; /* Added padding around the header content */
+  padding: 0px;
 }
 
 .heading {
-  margin: 0;
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
   font-size: 24px;
-  color: #333333; /* Heading color */
+  padding: 0px;
 }
 
 .dropdown-container {
