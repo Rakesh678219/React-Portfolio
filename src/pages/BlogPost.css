@@ -22,10 +22,12 @@
 
 .publish-date {
   font-size: 0.9rem;
+  color: orange; /* Orange color for date */
 }
 
 .reading-time {
   font-size: 0.9rem;
+  color: orange; /* Orange color for reading time */
 }
 
 .markdown-body {
@@ -34,6 +36,10 @@
   color: #333;
   text-align: left;
   word-wrap: break-word; /* Ensure long words break instead of overflow */
+}
+
+.markdown-body a {
+  color: blue; /* Blue color for links */
 }
 
 .markdown-body pre {
