@@ -15,7 +15,7 @@ const BlogCard = (props: any) => {
   return (
     <div className="blog-card-container">
       <img width="100%" src={props.img} alt="" />
-      <small style={{ color: 'white' }}>
+      <small>
         By <strong className="created-by">{props.createdBy}</strong> |{' '}
         {moment(localTime.format()).format('YYYY-MM-DD HH:mm:ss')}
       </small>
