@@ -1,9 +1,37 @@
 .blog-card-container {
-  display: inline-block;
-  background-color: #172855;
- padding: 25px ;
- border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  background-color: #181823;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow */
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  ); /* Creating a whitish glossy effect */
+  height: 100%; /* Ensure each card takes full height of its container */
 }
+
+.blog-card-container img {
+  width: 100%;
+  height: 200px; /* Set a fixed height for all images */
+  object-fit: cover; /* Ensure the image covers the entire space */
+  border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
+  margin-bottom: 10px;
+}
+
 .created-by {
-  color: #D4ADFC;
+  color: orange; /* Keeping the color orange as requested */
+  margin-top: auto; /* Push createdBy text to the bottom */
+}
+
+.sub-heading {
+  color: #ffffff; /* White color for heading */
+  margin-top: 10px; /* Adjusted margin for better spacing */
+}
+
+.text-content {
+  color: #ffffff; /* White color for content text */
+  margin-top: 10px; /* Adjusted margin for better spacing */
 }

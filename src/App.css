@@ -2,7 +2,6 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
 
 html {
-  /* width: 100%; */
   height: 100%;
   box-sizing: border-box;
 }
@@ -18,20 +17,16 @@ body {
   margin-bottom: 50px;
   padding-bottom: 6rem;
   min-height: 100%;
+  font-family: 'Lato', sans-serif;
 }
 
-.body {
-  margin: 0 auto;
-  width: 100%;
-  height: 100%;
-}
 .footer {
   position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background-color: #181823;
+  background-color: #181823; /* Dark background for footer */
   text-align: center;
   color: #faf9f6;
 }
@@ -45,91 +40,70 @@ ul {
   padding: 0;
   list-style: none;
 }
+
 .footer-social-icons {
   width: 350px;
   display: block;
   margin: 0 auto;
 }
+
 .social-icon {
   color: #fff;
 }
+
 ul.social-icons {
   margin-top: 10px;
 }
+
 .social-icons li {
   vertical-align: top;
   display: inline;
 }
+
 .social-icons a {
   color: #fff;
   text-decoration: none;
 }
-.fa-facebook {
+
+.fa-facebook,
+.fa-whatsapp,
+.fa-linkedin,
+.fa-instagram {
   padding: 10px 14px;
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  transition: background-color 0.5s ease;
   background-color: #322f30;
 }
+
 .fa-facebook:hover {
   background-color: #3d5b99;
 }
-.fa-whatsapp {
-  padding: 10px 12px;
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-color: #322f30;
-}
+
 .fa-whatsapp:hover {
   background-color: #04a884;
 }
-.fa-linkedin {
-  padding: 10px 14px;
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-color: #322f30;
-}
+
 .fa-linkedin:hover {
   background-color: #0073a4;
 }
-.fa-instagram {
-  padding: 10px 14px;
-  -o-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-color: #322f30;
-}
+
 .fa-instagram:hover {
   background-color: #e95950;
 }
+
 .all-rights-reserved {
   margin-top: 3rem;
-}
-
-footer {
-  background-color: #121315;
-  color: #a7a7a7;
-  font-size: 16px;
-  width: 100%;
 }
 
 .row {
   padding: 1em 1em;
 }
+
 .row.primary {
+  display: grid;
   grid-template-columns: 2fr 1fr 1fr 2fr;
   align-items: stretch;
 }
+
 .column {
   width: 100%;
   display: flex;
@@ -153,22 +127,25 @@ button {
   font-size: 1em;
   padding: 1em;
   width: 100%;
-  border-radius: 5px;
   margin-bottom: 5px;
 }
+
 button {
   background-color: #172855;
   color: #ffffff;
 }
+
 .heading {
   text-align: center;
   color: #333333;
   font-size: 1.5em;
 }
+
 .text-content {
-      color: #d1d1d9;
-    line-height: 1.5;
+  color: #d1d1d9;
+  line-height: 1.5;
 }
+
 .sub-heading {
   text-align: left;
   color: #ffffff;

@@ -1,16 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css');
+
+/* General styling */
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 0 20px; /* Added padding around the header content */
+}
+
+.heading {
+  margin: 0;
+  font-size: 24px;
+  color: #333333; /* Heading color */
+}
+
+.dropdown-container {
+  text-align: right; /* Align dropdown to the right */
+  flex-grow: 1; /* Allow the dropdown to take up remaining space */
+}
+
+.custom-dropdown {
+  width: 180px; /* Adjust width as needed */
+  padding: 8px;
+  font-size: 16px;
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Add border radius for aesthetics */
+}
+
 .auto-grid-blog {
-  --auto-grid-min-size: 20rem;
-  display: inline-grid;
+  list-style-type: none;
+  padding: 10px;
+  display: grid;
   grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
-  grid-gap: 1rem;
-  margin: 10px 20px 10px 20px;
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* Adjusted grid columns */
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .auto-grid-blog {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(150px, 1fr)
+    ); /* Adjusted columns for smaller screens */
+  }
+}
+.auto-grid-blog li {
+  margin-bottom: 30px;
+}
+
+/* BlogCard styles (adjust as per your component) */
+.blog-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.blog-card-content {
   padding: 20px;
 }
 
-.auto-grid-blog li {
-  padding: 15px;
-  border-radius: 10px;
+.blog-card-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  color: #333333; /* Title color */
+}
+
+.blog-card-description {
+  margin-top: 10px;
+  color: #555;
+  font-size: 16px;
+  /* Clamp description to 3 lines */
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.blog-card-footer {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #888;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 10px; /* Adjusted padding for smaller screens */
+  }
+
+  .custom-dropdown {
+    width: 100%; /* Full width dropdown on small screens */
+    margin-top: 10px;
+  }
+
+  .auto-grid-blog {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(200px, 1fr)
+    ); /* Adjust columns for smaller screens */
+  }
 }

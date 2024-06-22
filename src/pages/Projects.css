@@ -1,19 +1,46 @@
+.projects-page {
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.heading {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.dropdown-container {
+  margin-top: auto;
+}
+
+.custom-dropdown {
+  margin-left: 10px;
+  padding: 8px;
+  font-size: 16px;
+}
+
 .auto-grid {
-  --auto-grid-min-size: 16rem;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(var(--auto-grid-min-size), 1fr)
-  );
+  grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr));
   grid-gap: 2rem;
-  margin: 10px 20px 10px 20px;
-  padding: 0px 30px 40px 40px;
+  margin: 10px 0;
+  padding: 0;
 }
 
 .auto-grid li {
-  /* border: 1px solid #333333; */
-  /* background-image: url('https://cdn.openart.ai/stable_diffusion/7580ef77e6502153a4c8e6b2363638647593de0e_2000x2000.webp'); */
   padding: 15px;
   border-radius: 10px;
-  background-color:#172855
+  background-color: #181823; /* Dark bluish background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adding a subtle shadow */
+  background-image: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.4),
+    rgba(255, 255, 255, 0)
+  ); /* Creating a whitish glossy effect */
+}
+
+.auto-grid li:hover {
+  transform: translateY(-5px); /* Example: Add a hover effect */
 }

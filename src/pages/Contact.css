@@ -1,37 +1,60 @@
+/* General styling for inputs and select */
 input,
-select {
+select,
+textarea {
   width: 100%;
-  padding: 18px 20px;
+  padding: 14px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 10px;
   box-sizing: border-box;
+  font-size: 16px;
 }
 
+/* Button styles */
 input[type='submit'] {
   width: 100%;
-  background-color: #e13969a7;
+  background-color: #e13969;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  font-size: 16px;
 }
 
 input[type='submit']:hover {
-  background-color: #e13969;
+  background-color: #e13969a7;
 }
-.contact-form {
-  margin: 5%;
-  padding: 1% 5%;
-}
+
+/* Container and form styles */
 .contact-container {
-  display: inline-block;
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Adjust the height as needed */
+  background-color: #fff; /* Light background color */
 }
-.contact-details {
-  width: 50%;
-  display: inline-block;
+
+.contact-form {
+  width: 90%;
+  max-width: 600px;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.heading {
+  text-align: center;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+  .contact-form {
+    padding: 20px;
+  }
 }

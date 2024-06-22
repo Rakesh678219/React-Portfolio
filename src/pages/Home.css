@@ -1,122 +1,103 @@
+/* General styling */
 .home-page {
-  padding: 15%;
-  height: 1000px;
-  background: url(../../public/background4.jpg) no-repeat center center fixed;
-  background-size: cover;
-}
-.my-details {
-  padding: 48px 50px 50px;
-  border-radius: 20px;
-  background-color: #fff;
-}
-.about-me-page {
-  padding: 30px 30px 30px;
-  background-color: #181818;
-  color: #ffffff;
-}
-.about-me-page h1 {
-  text-align: left;
-  line-height: 10px;
-}
-.split-div {
-  display: inline-block;
-}
-.split-div2 p {
-}
-.split-div2 {
-  color: rgb(131, 131, 131);
-  font-size: 19px;
-  line-height: 25px;
-  padding: 50px;
-}
-.bubbles img {
-  width: 50px;
-  animation: bubbles 7s linear infinite;
-}
-.bubbles {
-  width: 100%;
+  padding: 10%;
+  color: #fff;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  position: absolute;
-  bottom: -50px;
-}
-@keyframes bubbles {
-  0% {
-    transform: translateY(0%);
-    opacity: 0;
-  }
-  50% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  70% {
-    transform: translateY(0%);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(-80vh);
-    opacity: 0;
-  }
-}
-.bubbles img:nth-child(1) {
-  width: 25px;
-  animation-delay: 2s;
-}
-.bubbles img:nth-child(2) {
-  animation-delay: 1s;
-}
-.bubbles img:nth-child(3) {
-  width: 25px;
-  animation-delay: 3s;
-}
-.bubbles img:nth-child(4) {
-  animation-delay: 4.5s;
-}
-.bubbles img:nth-child(5) {
-  animation-delay: 1s;
-}
-.bubbles img:nth-child(6) {
-  width: 20px;
-  animation-delay: 6s;
-}
-.bubbles img:nth-child(7) {
-  width: 35px;
-  animation-delay: 7s;
-}
-.profile {
-  display: flex;
-  flex-direction: column;
-  margin-top: 50px;
+  height: 100vh; /* Occupies full viewport height */
 }
 
-.name {
+.my-details {
+  padding: 30px;
+  background-color: #ffffff; /* Whitish background */
+  color: #333333; /* Dark text color */
+  text-align: left;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
+  transition: transform 0.3s ease; /* Smooth transformation */
+}
+
+.my-details:hover {
+  transform: translateY(-5px); /* Lift card on hover */
+}
+
+.my-details h1 {
   font-size: 36px;
   font-weight: bold;
-  margin-bottom: 10px;
+  color: #ff8c00; /* Orange primary color */
 }
 
-.profession {
-  font-size: 24px;
+.my-details p {
+  font-size: 18px;
   margin-bottom: 20px;
-  line-height: 2;
 }
 
-.interest {
-  font-size: 24px;
-  margin-bottom: 20px;
-  line-height: 2;
+.button-container {
+  margin-top: 20px;
 }
 
-.field,
-.skills,
-.profession-skills,
-.values,
-.beliefs,
-.goals,
-.commitments,
-.strengths {
+.Button {
+  background-color: #ff8c00; /* Orange button background */
+  color: #ffffff;
+  padding: 12px 24px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Button:hover {
+  background-color: #e67300; /* Darker orange on hover */
+}
+
+/* About Me Section */
+.about-me-page {
+  padding: 50px;
+  background-color: #272732; /* Adjusted secondary dark color */
+  color: #ffffff;
+}
+
+.split-div {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+
+.split-div2 {
+  flex: 1;
+  text-align: left; /* Align text to the left */
+}
+
+.split-div2 .profile {
+  margin-right: 20px; /* Spacing between sections */
+}
+
+.split-div2 h1.name {
   font-size: 24px;
-  margin-bottom: 20px;
-  line-height: 2;
+  color: #ff8c00; /* Orange primary color */
+}
+
+.split-div2 p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #dcdcdc; /* Lightened text color */
+}
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .home-page {
+    padding: 5%;
+  }
+
+  .my-details {
+    font-size: 18px;
+    padding: 20px;
+  }
+
+  .about-me-page {
+    padding: 30px;
+  }
 }
