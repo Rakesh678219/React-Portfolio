@@ -1,0 +1,60 @@
+:root {
+  --grey-900: 23, 23, 23;
+  --card-bg: rgb(var(--grey-900));
+  --card-color: rgb(255, 255, 255);
+}
+
+.comment-section {
+  margin-bottom: 30px;
+}
+
+.comment {
+  display: flex;
+  border: 1px solid #363636;
+  flex-direction: column; /* Ensure content stacks vertically */
+  background-color: var(--card-bg);
+  color: var(--card-color);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px; /* Added padding for space around content */
+}
+
+.comment p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.comment-header {
+  display: flex;
+  align-items: center; /* Align items vertically */
+  margin-bottom: 5px;
+}
+
+.comment-user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.comment-info {
+  display: flex;
+  flex-grow: 1; /* Allow info to take remaining space */
+  align-items: center; /* Center align within flex container */
+}
+
+.comment-by {
+  color: orange;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.commented-time {
+  font-size: 12px;
+  color: #b6b1b1;
+  font-weight: 600;
+}
+.children-comments {
+  margin-top: 15px;
+}

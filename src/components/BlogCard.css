@@ -11,6 +11,7 @@
     rgba(255, 255, 255, 0)
   ); /* Creating a whitish glossy effect */
   height: 100%; /* Ensure each card takes full height of its container */
+  transition: transform 0.2s ease-in-out; /* Adding transition for smooth animation */
 }
 
 .blog-card-container img {
@@ -19,6 +20,16 @@
   object-fit: contain; /* Ensure the image covers the entire space */
   border-radius: 10px 10px 0 0; /* Rounded corners only at the top */
   margin-bottom: 10px;
+  transition: transform 0.2s ease-in-out; /* Adding transition for smooth hover effect */
+}
+
+.blog-card-container:hover {
+  transform: scale(1.05); /* Scale up the card on hover */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.blog-card-container:hover img {
+  transform: scale(1.1); /* Scale up the image on hover */
 }
 
 .created-by {

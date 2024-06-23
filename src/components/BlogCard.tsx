@@ -13,7 +13,7 @@ const BlogCard = (props: any) => {
     navigate(`/blog/${props.slug}`)
   }
   return (
-    <div className="blog-card-container">
+    <div className="blog-card-container" onClick={handleReadMore}>
       <img width="100%" src={props.img} alt="" />
       <small>
         By <strong className="created-by">{props.createdBy}</strong> |{' '}
