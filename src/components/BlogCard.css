@@ -52,3 +52,30 @@
   -webkit-line-clamp: 3; /* Limit text to 3 lines */
   -webkit-box-orient: vertical;
 }
+
+.blog-post-title {
+  display: flex;
+  align-items: center;
+}
+
+.blog-post-title span {
+  margin-right: 10px; /* Adjust as needed */
+}
+
+.difficulty-level {
+  font-size: 20px !important;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.difficulty-level.easy {
+  color: green;
+}
+
+.difficulty-level.medium {
+  color: orange;
+}
+
+.difficulty-level.hard {
+  color: red;
+}

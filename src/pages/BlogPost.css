@@ -68,3 +68,38 @@
   color: #ccc; /* Lighter gray for loading text */
 }
 
+.example-testcases {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 15px;
+}
+
+.example-testcases li {
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+
+.hints {
+  list-style-type: none;
+  counter-reset: hint-counter;
+  padding-left: 0;
+  margin-top: 15px;
+  line-height: 2;
+}
+
+.hints li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: #fff;
+  position: relative;
+}
+
+.hints li:before {
+  content: counter(hint-counter);
+  counter-increment: hint-counter;
+  position: absolute;
+  left: -25px;
+  top: 0;
+  font-weight: bold;
+  color: #fff;
+}

@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
-import moment from 'moment' // Import moment for date formatting
-import './BlogPost.css' // Import your CSS file for styling
+import moment from 'moment'
+import './BlogPost.css'
 import CommentSection from '../components/CommentSection'
+import axios from 'axios' // Import axios for making HTTP requests
 
 const BlogPost = () => {
-  const [article, setArticle]: any = useState(null)
+  const [article, setArticle] = useState<any>(null)
+  const [leetCodeDetails, setLeetCodeDetails] = useState<any>(null) // State for LeetCode details
   const slug = window.location.pathname.split('/')?.[2]
+
   useEffect(() => {
     const fetchArticle = async () => {
       try {
-        // Replace {username} with the actual username
+        // Fetch article from dev.to
         const response = await fetch(
           `https://dev.to/api/articles/rakeshreddy512/${slug}`
         )
@@ -27,15 +30,55 @@ const BlogPost = () => {
     }
 
     fetchArticle()
-  }, [])
+  }, [slug])
+
+  useEffect(() => {
+    const fetchLeetCodeProblem = async () => {
+      const leetcodeSlug = slug.split('-')[2] + '-' + slug.split('-')[3]
+      try {
+        // Fetch problem details from LeetCode API
+        const response = await axios.get(
+          `https://alfa-leetcode-api.onrender.com/select?titleSlug=${leetcodeSlug}`
+        )
+        console.log(response)
+
+        if (response.status === 200) {
+          setLeetCodeDetails(response.data) // Set LeetCode details
+        } else {
+          throw new Error('Failed to fetch LeetCode problem')
+        }
+      } catch (error) {
+        console.error('Error fetching LeetCode problem:', error)
+      }
+    }
+
+    fetchLeetCodeProblem()
+  }, [slug])
 
   if (!article) {
     return <div className="loading">Loading...</div> // Apply loading style
   }
+  const exampleTestcases = leetCodeDetails.exampleTestcases.split('\n')
 
   return (
     <div className="blog-post-container">
-      <h2 className="blog-post-title">{article.title}</h2>
+      <a
+        href={leetCodeDetails?.link ?? '#'}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="blog-post-link"
+      >
+        <h2 className="blog-post-title">
+          <span>{article.title}</span>
+          {/* {leetCodeDetails && (
+            <span
+              className={`difficulty-level ${leetCodeDetails.difficulty.toLowerCase()}`}
+            >
+              {leetCodeDetails.difficulty}
+            </span>
+          )} */}
+        </h2>
+      </a>
       <div>
         <img
           width="100%"
@@ -53,12 +96,54 @@ const BlogPost = () => {
         </p>
         <p className="reading-time">{article.reading_time_minutes} min read</p>
       </div>
+      {/* Display LeetCode problem details if available */}
+      {leetCodeDetails && (
+        <div
+          className="leetcode-problem-details"
+          style={{ border: '1px solid #fff', padding: '20px' }}
+        >
+          <h3>Problem Description</h3>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: leetCodeDetails.question,
+            }}
+          />
+
+          {/* Display example test cases */}
+          <h3>Example Test Cases</h3>
+          <ul className="example-testcases">
+            {exampleTestcases?.map((example: any, index: any) => (
+              <li key={index}>{example}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {leetCodeDetails && (
+        <div>
+          <h3 style={{ marginTop: '20px' }}>
+            Before diving into Solution go through the hints given in the
+            problem{' '}
+          </h3>
+          {/* Display hints */}
+          <h2>Hints</h2>
+          <ol className="hints">
+            {leetCodeDetails.hints.map((hint: any, index: any) => (
+              <li key={index}>{hint}</li>
+            ))}
+          </ol>
+        </div>
+      )}
+      <h2 style={{ marginTop: '20px' }}>Solution </h2>
       <ReactMarkdown className="markdown-body">
         {article.body_markdown}
       </ReactMarkdown>
       <p className="published-by">Published by: {article.user.name}</p>
       <div style={{ display: 'grid' }}>
-        <a href="https://ko-fi.com/rakeshreddy" target="_blank">
+        <a
+          href="https://ko-fi.com/rakeshreddy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <img
             height="36"
             style={{
@@ -72,8 +157,8 @@ const BlogPost = () => {
           />
         </a>
       </div>
-
-      {article?.id && <CommentSection articleId={article?.id} />}
+      {/* Render comments section */}
+      {article.id && <CommentSection articleId={article.id} />}
     </div>
   )
 }
