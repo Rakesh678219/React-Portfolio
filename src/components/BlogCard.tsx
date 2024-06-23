@@ -2,13 +2,12 @@ import React from 'react'
 import Button from './Button'
 import './BlogCard.css'
 import moment from 'moment'
-import { useNavigate } from 'react-router-dom' // Import useNavigate hook
+import { useNavigate } from 'react-router-dom'
 
 const BlogCard = (props: any) => {
-  const navigate = useNavigate() // Initialize useNavigate hook
+  const navigate = useNavigate()
   const localTime = moment.utc(props.createdAt).local()
 
-  // Function to handle click on "Read more..." button
   const handleReadMore = () => {
     navigate(`/blog/${props.slug}`)
   }
