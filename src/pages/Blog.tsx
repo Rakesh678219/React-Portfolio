@@ -48,6 +48,9 @@ const Blog = () => {
   }, [])
   // Sample data for blogs
   const blogs: any = leetCodeArticles
+  const allTags: string[][] = blogs.map((blog: any) => blog.tag_list)
+  const combinedTags: string[] = allTags.flat()
+  const uniqueTags: string[] = Array.from(new Set(combinedTags))
   // Filtered blogs based on selected category
   const filteredBlogs =
     selectedCategory === 'all'
@@ -67,8 +70,13 @@ const Blog = () => {
               onChange={handleChange}
             >
               <option value="all">All Blogs</option>
-              <option value="leetcode">LeetCode Series</option>
-              <option value="cooking">Cooking</option>
+              {uniqueTags.map((tag) => {
+                return (
+                  <option key={tag} value={tag}>
+                    {tag.charAt(0).toUpperCase() + tag.slice(1)}
+                  </option>
+                )
+              })}
             </select>
           </div>
         </div>

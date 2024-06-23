@@ -22,7 +22,10 @@ export const App = () => {
   }, [])
   return (
     <>
-      <Navbar />
+      <Router>
+        <Navbar />
+      </Router>
+
       {loading ? (
         <Loading />
       ) : (
