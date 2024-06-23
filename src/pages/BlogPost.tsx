@@ -43,7 +43,9 @@ const BlogPost = () => {
         console.log(response)
 
         if (response.status === 200) {
-          setLeetCodeDetails(response.data) // Set LeetCode details
+          setLeetCodeDetails(
+            Object.keys(response.data).length > 0 ? response.data : null
+          ) // Set LeetCode details
         } else {
           throw new Error('Failed to fetch LeetCode problem')
         }
@@ -58,7 +60,7 @@ const BlogPost = () => {
   if (!article) {
     return <div className="loading">Loading...</div> // Apply loading style
   }
-  const exampleTestcases = leetCodeDetails.exampleTestcases.split('\n')
+  const exampleTestcases = leetCodeDetails?.exampleTestcases?.split('\n')
 
   return (
     <div className="blog-post-container">
@@ -118,7 +120,7 @@ const BlogPost = () => {
           </ul>
         </div>
       )}
-      {leetCodeDetails && (
+      {leetCodeDetails !== null && (
         <div>
           <h3 style={{ marginTop: '20px' }}>
             Before diving into Solution go through the hints given in the
@@ -127,7 +129,7 @@ const BlogPost = () => {
           {/* Display hints */}
           <h2>Hints</h2>
           <ol className="hints">
-            {leetCodeDetails.hints.map((hint: any, index: any) => (
+            {leetCodeDetails?.hints?.map((hint: any, index: any) => (
               <li key={index}>{hint}</li>
             ))}
           </ol>
