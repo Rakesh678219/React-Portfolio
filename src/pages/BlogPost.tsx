@@ -34,11 +34,13 @@ const BlogPost = () => {
 
   useEffect(() => {
     const fetchLeetCodeProblem = async () => {
-      const leetcodeSlug = slug.split('-')[2] + '-' + slug.split('-')[3]
+      const parts = slug.split('-')
+      const actualSlug = parts.slice(1, parts.length - 1).join('-')
+
       try {
         // Fetch problem details from LeetCode API
         const response = await axios.get(
-          `https://alfa-leetcode-api.onrender.com/select?titleSlug=${leetcodeSlug}`
+          `https://alfa-leetcode-api.onrender.com/select?titleSlug=${actualSlug}`
         )
         console.log(response)
 
