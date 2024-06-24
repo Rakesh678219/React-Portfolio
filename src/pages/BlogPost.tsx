@@ -144,12 +144,16 @@ const BlogPost = () => {
             problem{' '}
           </h3>
           {/* Display hints */}
-          <h2>Hints</h2>
-          <ol className="hints">
-            {leetCodeDetails?.hints?.map((hint: any, index: any) => (
-              <li key={index}>{hint}</li>
-            ))}
-          </ol>
+          {leetCodeDetails?.hints.length > 0 && (
+            <>
+              <h2>Hints</h2>
+              <ol className="hints">
+                {leetCodeDetails?.hints?.map((hint: any, index: any) => (
+                  <li key={index}>{hint}</li>
+                ))}
+              </ol>
+            </>
+          )}
         </div>
       )}
       <h2 style={{ marginTop: '20px' }}>Solution </h2>
