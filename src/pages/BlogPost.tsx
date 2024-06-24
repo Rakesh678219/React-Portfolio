@@ -31,16 +31,31 @@ const BlogPost = () => {
 
     fetchArticle()
   }, [slug])
+  const extractSlugFromLeetCodeSlug = (slug: any) => {
+    // Split by 'leetcode-' and take the second part
+    const parts = slug.split('leetcode-')[1]
 
+    if (!parts) {
+      // Handle case where 'leetcode-' prefix is not found
+      return slug
+    }
+
+    // Split by '-' and remove the first part and the last part
+    const partsArray = parts.split('-').slice(1, -1)
+
+    // Join back the remaining parts with '-'
+    const actualSlug = partsArray.join('-')
+
+    return actualSlug
+  }
   useEffect(() => {
     const fetchLeetCodeProblem = async () => {
-      const parts = slug.split('-')
-      const actualSlug = parts.slice(1, parts.length - 1).join('-')
-
       try {
         // Fetch problem details from LeetCode API
         const response = await axios.get(
-          `https://alfa-leetcode-api.onrender.com/select?titleSlug=${actualSlug}`
+          `https://alfa-leetcode-api.onrender.com/select?titleSlug=${extractSlugFromLeetCodeSlug(
+            slug
+          )}`
         )
         console.log(response)
 
@@ -59,9 +74,9 @@ const BlogPost = () => {
     fetchLeetCodeProblem()
   }, [slug])
 
-  if (!article) {
-    return <div className="loading">Loading...</div> // Apply loading style
-  }
+  // if (!article) {
+  //   return <div className="loading">Loading...</div> // Apply loading style
+  // }
   const exampleTestcases = leetCodeDetails?.exampleTestcases?.split('\n')
 
   return (
