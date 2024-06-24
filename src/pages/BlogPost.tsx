@@ -104,7 +104,7 @@ const BlogPost = () => {
       {leetCodeDetails && (
         <div
           className="leetcode-problem-details"
-          style={{ border: '1px solid #fff', padding: '20px' }}
+          // style={{ border: '1px solid #fff', padding: '20px' }}
         >
           <h3>Problem Description</h3>
           <div
