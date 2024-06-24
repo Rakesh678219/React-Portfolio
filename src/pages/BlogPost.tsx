@@ -74,9 +74,9 @@ const BlogPost = () => {
     fetchLeetCodeProblem()
   }, [slug])
 
-  // if (!article) {
-  //   return <div className="loading">Loading...</div> // Apply loading style
-  // }
+  if (!article) {
+    return <div className="loading">Loading...</div> // Apply loading style
+  }
   const exampleTestcases = leetCodeDetails?.exampleTestcases?.split('\n')
 
   return (
