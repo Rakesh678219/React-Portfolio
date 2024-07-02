@@ -21,6 +21,7 @@ const Blog = () => {
         {
           headers: {
             'api-key': DEV_API_KEY,
+            mode: 'no-cors',
           },
         }
       )
