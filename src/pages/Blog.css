@@ -129,3 +129,28 @@ html {
     ); /* Adjust columns for smaller screens */
   }
 }
+
+/* Search Bar Container */
+.search-bar-container {
+  margin: 20px auto; /* Centers the container horizontally with auto margins */
+  width: 80%; /* Adjust this width as needed */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+}
+
+/* Search Bar Styling */
+.search-bar {
+  width: 100%;
+  max-width: 1000px; /* Optional: limits the width of the search bar */
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #007bff;
+  outline: none;
+}

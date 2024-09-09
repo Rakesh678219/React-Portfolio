@@ -7,11 +7,15 @@ const Blog = () => {
   const BASE_URL = 'https://dev.to/api/'
   // State to manage selected category
   const [selectedCategory, setSelectedCategory] = useState('all')
-
+  const [searchQuery, setSearchQuery] = useState('')
   const [leetCodeArticles, setLeetCodeArticles] = useState([])
   // Function to handle dropdown change
   const handleChange = (event: any) => {
     setSelectedCategory(event.target.value)
+  }
+
+  const handleSearchChange = (event: any) => {
+    setSearchQuery(event.target.value.toLowerCase())
   }
 
   async function fetchData(page: any, pageSize: any) {
@@ -53,16 +57,37 @@ const Blog = () => {
   const combinedTags: string[] = allTags.flat()
   const uniqueTags: string[] = Array.from(new Set(combinedTags))
   // Filtered blogs based on selected category
-  const filteredBlogs =
-    selectedCategory === 'all'
-      ? blogs
-      : blogs.filter((blog: any) => blog.tag_list.includes(selectedCategory))
+  // Ensure blogs is always an array and is filtered correctly
+  const filteredBlogs = blogs
+    .filter((blog: any) => {
+      // Ensure tag_list is an array before using includes
+      const tagList = Array.isArray(blog.tag_list) ? blog.tag_list : []
+      return selectedCategory === 'all' || tagList.includes(selectedCategory)
+    })
+    .filter((blog: any) => {
+      // Apply search query filter
+      const query = searchQuery.toLowerCase()
+      return (
+        blog.title.toLowerCase().includes(query) ||
+        blog.description.toLowerCase().includes(query)
+      )
+    })
 
   return (
     <>
       <div className="blog-page">
         <div className="header">
           <h1 className="heading">From the blog</h1>
+          {/* Search bar */}
+          <div className="search-bar-container">
+            <input
+              type="text"
+              className="search-bar"
+              placeholder="Search blogs..."
+              value={searchQuery}
+              onChange={handleSearchChange}
+            />
+          </div>
           {/* Dropdown for selecting blog category */}
           <div className="dropdown-container">
             <select
