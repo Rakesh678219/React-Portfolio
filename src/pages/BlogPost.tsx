@@ -4,11 +4,33 @@ import moment from 'moment'
 import './BlogPost.css'
 import CommentSection from '../components/CommentSection'
 import axios from 'axios' // Import axios for making HTTP requests
+import remarkGfm from 'remark-gfm'
+import rehypeRaw from 'rehype-raw'
 
+interface MarkdownComponentProps {
+  article: {
+    body_markdown: string
+  }
+}
 const BlogPost = () => {
   const [article, setArticle] = useState<any>(null)
   const [leetCodeDetails, setLeetCodeDetails] = useState<any>(null) // State for LeetCode details
   const slug = window.location.pathname.split('/')?.[2]
+
+  // Helper function to replace custom embed syntax with HTML
+  // Function to replace custom embed syntax with HTML
+  const processMarkdownContent = (markdown: string) => {
+    // Example replacement for custom YouTube embed syntax
+    return markdown.replace(
+      /{% embed (https:\/\/www\.youtube\.com\/watch\?v=[^ ]+) %}/g,
+      (match, url) => {
+        const videoId = new URL(url).searchParams.get('v')
+        return videoId
+          ? `<iframe src="https://www.youtube.com/embed/${videoId}" width="748" height="421" frameborder="0" allowfullscreen></iframe>`
+          : match
+      }
+    )
+  }
 
   useEffect(() => {
     const fetchArticle = async () => {
@@ -157,8 +179,12 @@ const BlogPost = () => {
         </div>
       )}
       <h2 style={{ marginTop: '20px' }}>Solution </h2>
-      <ReactMarkdown className="markdown-body">
-        {article.body_markdown}
+      <ReactMarkdown
+        className="markdown-body"
+        remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]} // Enable raw HTML rendering
+      >
+        {processMarkdownContent(article.body_markdown)}
       </ReactMarkdown>
       <p className="published-by">Published by: {article.user.name}</p>
       <div style={{ display: 'grid' }}>
