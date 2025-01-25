@@ -40,7 +40,7 @@ const Blog = () => {
   useEffect(() => {
     // Example usage:
     const page = 1
-    const pageSize = 10
+    const pageSize = 1000
     fetchData(page, pageSize)
       .then((data) => {
         console.log('Fetched data:', data)
