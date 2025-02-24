@@ -4,6 +4,7 @@ import './Blog.css'
 import axios from 'axios'
 const Blog = () => {
   const DEV_API_KEY = 'yZmXLY3jYhWms39Gxgqnfc28'
+
   const BASE_URL = 'https://dev.to/api/'
   // State to manage selected category
   const [selectedCategory, setSelectedCategory] = useState('all')
@@ -24,13 +25,13 @@ const Blog = () => {
         `${BASE_URL}articles/me/published?page=${page}&per_page=${pageSize}`,
         {
           headers: {
-            'api-key': DEV_API_KEY,
-            mode: 'no-cors',
+            Accept: 'application/vnd.forem.api-v1+json', // Required accept header
+            'api-key': DEV_API_KEY, // Your API key
           },
         }
       )
       setLeetCodeArticles(response.data)
-      return response.data // Assuming you want to return the response data
+      return response.data // Returning response data
     } catch (error) {
       console.error('Error fetching data:', error)
       throw error // Handle or propagate the error as needed
