@@ -12,6 +12,7 @@ import BlogPost from './pages/BlogPost'
 import Portfolio from './pages/Portfolio'
 import { useState, useEffect } from 'react'
 import Loading from './components/Loading'
+import LeetcodeExplorer from './components/LeetcodeExplorer'
 export const App = () => {
   const [loading, setLoading] = useState(false)
   useEffect(() => {
@@ -39,6 +40,10 @@ export const App = () => {
                 <Route path="/projects" element={<Projects />} />
                 <Route path="/blog" element={<Blog />} />
                 <Route path="/blog/:slug" element={<BlogPost />} />
+                <Route
+                  path="/leetcodecompanywise"
+                  element={<LeetcodeExplorer />}
+                />
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/portfolio" element={<Portfolio />} />
               </Routes>

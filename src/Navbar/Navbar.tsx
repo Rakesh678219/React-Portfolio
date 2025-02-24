@@ -34,6 +34,12 @@ const Navbar = () => {
         Blog
       </a>
       <a
+        href="/leetcodecompanywise"
+        className={location.pathname === '/leetcodecompanywise' ? 'active' : ''}
+      >
+        Leetcode Company Wise
+      </a>
+      <a
         href="/contact"
         className={location.pathname === '/contact' ? 'active' : ''}
       >
