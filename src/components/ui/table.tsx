@@ -5,11 +5,15 @@ export const Table = ({ children }: { children: React.ReactNode }) => (
 )
 
 export const TableHeader = ({ children }: { children: React.ReactNode }) => (
-  <thead className="bg-gray-200">{children}</thead>
+  <thead style={{ color: '#fff' }} className="bg-gray-200">
+    {children}
+  </thead>
 )
 
 export const TableRow = ({ children }: { children: React.ReactNode }) => (
-  <tr className="border-b">{children}</tr>
+  <tr style={{ color: '#fff' }} className="border-b">
+    {children}
+  </tr>
 )
 
 export const TableHead = ({ children }: { children: React.ReactNode }) => (

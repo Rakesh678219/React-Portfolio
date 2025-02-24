@@ -63,10 +63,12 @@ export default function LeetcodeExplorer() {
   }
 
   return (
-    <div className="flex h-screen p-4 gap-4">
+    <div style={{ padding: '20px' }} className="flex h-screen p-4 gap-4">
       {/* Sidebar */}
       <div className="w-1/4 p-4 border-r overflow-y-auto bg-gray-100 rounded-lg">
-        <h2 className="text-xl font-bold mb-4">Companies</h2>
+        <h2 style={{ color: '#fff' }} className="text-xl font-bold mb-4">
+          Companies
+        </h2>
         <div className="grid grid-cols-1 gap-2">
           {folders.map((folder) => (
             <Button
@@ -84,7 +86,9 @@ export default function LeetcodeExplorer() {
       <div className="w-1/4 p-4 border-r overflow-y-auto bg-gray-100 rounded-lg">
         {selectedCompany && (
           <>
-            <h2 className="text-xl font-bold mb-4">{selectedCompany}</h2>
+            <h2 style={{ color: '#fff' }} className="text-xl font-bold mb-4">
+              {selectedCompany}
+            </h2>
             <div className="grid grid-cols-1 gap-2">
               {files.map((file) => (
                 <Button
@@ -104,7 +108,9 @@ export default function LeetcodeExplorer() {
       <div className="w-1/2 p-4 overflow-y-auto bg-gray-100 rounded-lg">
         {csvData ? (
           <>
-            <h2 className="text-xl font-bold mb-4">{selectedFile}</h2>
+            <h2 style={{ color: '#fff' }} className="text-xl font-bold mb-4">
+              {selectedFile}
+            </h2>
             <div className="overflow-x-auto">
               <Table className="w-full border-collapse border border-gray-300">
                 <TableHeader>
@@ -141,7 +147,7 @@ export default function LeetcodeExplorer() {
             </div>
           </>
         ) : (
-          <p className="text-center text-gray-600">
+          <p style={{ color: '#fff' }} className="text-center text-gray-600">
             Select a file to view data.
           </p>
         )}
