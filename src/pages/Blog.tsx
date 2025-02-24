@@ -18,7 +18,7 @@ const Blog = () => {
   const handleSearchChange = (event: any) => {
     setSearchQuery(event.target.value.toLowerCase())
   }
-
+  // https://chatgpt.com/share/67bc4dd2-6050-800f-9a87-f5eac50e9ecb
   async function fetchData(page: any, pageSize: any) {
     try {
       const response = await axios.get(
