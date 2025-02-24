@@ -1,13 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import { Card } from '@/components/ui/card'
-import {
-  Table,
-  TableHeader,
-  TableRow,
-  TableHead,
-  TableBody,
-  TableCell,
-} from './ui/table'
 import { Button } from './ui/button'
 import Papa from 'papaparse'
 
@@ -28,7 +19,6 @@ export default function LeetcodeExplorer() {
   const [files, setFiles] = useState<File[]>([])
   const [csvData, setCsvData] = useState<any[] | null>(null)
   const [selectedCompany, setSelectedCompany] = useState<string | null>(null)
-  const [selectedFile, setSelectedFile] = useState<string | null>(null)
 
   useEffect(() => {
     fetch(GITHUB_REPO)
@@ -37,6 +27,7 @@ export default function LeetcodeExplorer() {
         const companies = data.filter((item: any) => item.type === 'dir')
         setFolders(companies)
       })
+      .catch((error) => console.error('Error fetching folders:', error))
   }, [])
 
   const fetchFiles = (company: string) => {
@@ -48,6 +39,7 @@ export default function LeetcodeExplorer() {
         setSelectedCompany(company)
         setCsvData(null)
       })
+      .catch((error) => console.error('Error fetching files:', error))
   }
 
   const fetchCsvData = (file: File) => {
@@ -56,44 +48,49 @@ export default function LeetcodeExplorer() {
       .then((csvText) => {
         Papa.parse(csvText, {
           header: true,
-          complete: (result) => setCsvData(result.data),
+          complete: (result) => {
+            const filteredData = result.data.map((row: any) => {
+              const { 'Acceptance Rate': _, ...rest } = row
+              return rest
+            })
+            setCsvData(filteredData.length > 0 ? filteredData : [])
+          },
         })
       })
-    setSelectedFile(file.name)
+      .catch((error) => {
+        console.error('Error fetching CSV:', error)
+        setCsvData([])
+      })
   }
 
   return (
-    <div style={{ padding: '20px' }} className="flex h-screen p-4 gap-4">
+    <div className="flex h-screen p-4 gap-4 bg-gray-50">
       {/* Sidebar */}
-      <div className="w-1/4 p-4 border-r overflow-y-auto bg-gray-100 rounded-lg">
-        <h2 style={{ color: '#fff' }} className="text-xl font-bold mb-4">
-          Companies
-        </h2>
+      <div className="w-1/4 p-4 border-r overflow-y-auto bg-white rounded-lg shadow-md">
+        <h2 className="text-xl font-bold mb-4">Companies</h2>
         <div className="grid grid-cols-1 gap-2">
           {folders.map((folder) => (
             <Button
               key={folder.name}
-              className="w-full text-left bg-[#0000001a] shadow-md p-2 rounded-lg hover:bg-gray-200 flex items-center"
+              className="w-full text-left shadow-md p-2 rounded-lg hover:bg-gray-200"
               onClick={() => fetchFiles(folder.name)}
             >
-              <span className="text-4xl mr-2">📁</span> {folder.name}
+              📁 {folder.name}
             </Button>
           ))}
         </div>
       </div>
 
       {/* File List */}
-      <div className="w-1/4 p-4 border-r overflow-y-auto bg-gray-100 rounded-lg">
+      <div className="w-1/4 p-4 border-r overflow-y-auto bg-white rounded-lg shadow-md">
         {selectedCompany && (
           <>
-            <h2 style={{ color: '#fff' }} className="text-xl font-bold mb-4">
-              {selectedCompany}
-            </h2>
+            <h2 className="text-xl font-bold mb-4">{selectedCompany}</h2>
             <div className="grid grid-cols-1 gap-2">
               {files.map((file) => (
                 <Button
                   key={file.name}
-                  className="w-full text-left bg-[#0000001a] shadow-md p-2 rounded-lg hover:bg-gray-200"
+                  className="w-full text-left shadow-md p-2 rounded-lg hover:bg-gray-200"
                   onClick={() => fetchCsvData(file)}
                 >
                   📄 {file.name}
@@ -104,51 +101,34 @@ export default function LeetcodeExplorer() {
         )}
       </div>
 
-      {/* CSV Data Table */}
-      <div className="w-1/2 p-4 overflow-y-auto bg-gray-100 rounded-lg">
+      {/* CSV Data as Cards */}
+      <div className="w-1/2 p-4 overflow-y-auto bg-white rounded-lg shadow-md">
         {csvData ? (
-          <>
-            <h2 style={{ color: '#fff' }} className="text-xl font-bold mb-4">
-              {selectedFile}
-            </h2>
-            <div className="overflow-x-auto">
-              <Table className="w-full border-collapse border border-gray-300">
-                <TableHeader>
-                  <TableRow className="bg-gray-200">
-                    {csvData.length > 0 &&
-                      Object.keys(csvData[0]).map((key) => (
-                        <TableHead
-                          key={key}
-                          className="border border-gray-300 p-2 text-left font-semibold"
-                        >
-                          {key}
-                        </TableHead>
-                      ))}
-                  </TableRow>
-                </TableHeader>
-                <TableBody>
-                  {csvData.map((row, index) => (
-                    <TableRow
-                      key={index}
-                      className="odd:bg-white even:bg-gray-50 hover:bg-gray-100"
-                    >
-                      {Object.values(row).map((value, i) => (
-                        <TableCell
-                          key={i}
-                          className="border border-gray-300 p-2"
-                        >
-                          {value}
-                        </TableCell>
-                      ))}
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {csvData.map((row, index) => (
+              <div
+                key={index}
+                className="p-6 bg-gradient-to-br from-white to-gray-100 shadow-xl rounded-2xl cursor-pointer hover:bg-gray-200 transition-transform transform hover:scale-105 border border-gray-200"
+                onClick={() => window.open(row.Link, '_blank')}
+              >
+                <h3 className="text-lg font-bold mb-2 text-gray-800">
+                  {row.Title}
+                </h3>
+                <p className="text-sm text-gray-600 mb-1">
+                  Topic: <span className="font-medium">{row.Topics}</span>
+                </p>
+                <p className="text-sm text-gray-500">
+                  Difficulty:{' '}
+                  <span className="font-semibold text-indigo-600">
+                    {row.Difficulty}
+                  </span>
+                </p>
+              </div>
+            ))}
+          </div>
         ) : (
-          <p style={{ color: '#fff' }} className="text-center text-gray-600">
-            Select a file to view data.
+          <p className="text-center text-gray-600">
+            Select a file to view problems.
           </p>
         )}
       </div>
