@@ -22,7 +22,6 @@
 
 .comment p {
   margin: 0;
-  font-size: 16px;
 }
 
 .comment-header {
@@ -51,7 +50,6 @@
 }
 
 .commented-time {
-  font-size: 12px;
   color: #b6b1b1;
   font-weight: 600;
 }

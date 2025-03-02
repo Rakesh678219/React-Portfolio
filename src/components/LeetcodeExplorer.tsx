@@ -69,53 +69,55 @@ export default function LeetcodeExplorer() {
   }
 
   return (
-    <div className="p-6">
-      <div style={{ marginBottom: '10px' }}>
-        {/* Company Dropdown */}
-        <select
-          className="custom-dropdown"
-          value={selectedCompany}
-          onChange={(e) => fetchFiles(e.target.value)}
-        >
-          <option value="">Select Company</option>
-          {folders.map((folder) => (
-            <option key={folder.name} value={folder.name}>
-              {folder.name}
-            </option>
-          ))}
-        </select>
-
-        {/* File Dropdown */}
-        <select
-          className="custom-dropdown"
-          value={selectedFile}
-          onChange={(e) => {
-            setSelectedFile(e.target.value)
-            fetchCsvData(e.target.value)
-          }}
-          disabled={!selectedCompany}
-        >
-          <option value="">Select File</option>
-          {files.map((file) => (
-            <option key={file.name} value={file.download_url}>
-              {file.name}
-            </option>
-          ))}
-        </select>
-      </div>
-
-      {/* CSV Data Display */}
-      <div>
-        {csvData ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-            {csvData.map((question, index) => (
-              <LeetcodeCard key={index} question={question} />
+    <>
+      <div style={{ padding: '10px' }} className="p-6">
+        <div style={{ marginLeft: '10px', paddingTop: '10px' }}>
+          {/* Company Dropdown */}
+          <select
+            className="custom-dropdown"
+            value={selectedCompany}
+            onChange={(e) => fetchFiles(e.target.value)}
+          >
+            <option value="">Select Company</option>
+            {folders.map((folder) => (
+              <option key={folder.name} value={folder.name}>
+                {folder.name}
+              </option>
             ))}
-          </div>
-        ) : (
-          <p>Select a file to view problems.</p>
-        )}
+          </select>
+
+          {/* File Dropdown */}
+          <select
+            className="custom-dropdown"
+            value={selectedFile}
+            onChange={(e) => {
+              setSelectedFile(e.target.value)
+              fetchCsvData(e.target.value)
+            }}
+            disabled={!selectedCompany}
+          >
+            <option value="">Select File</option>
+            {files.map((file) => (
+              <option key={file.name} value={file.download_url}>
+                {file.name}
+              </option>
+            ))}
+          </select>
+        </div>
+
+        {/* CSV Data Display */}
+        <div style={{ padding: '20px' }}>
+          {csvData ? (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+              {csvData.map((question, index) => (
+                <LeetcodeCard key={index} question={question} />
+              ))}
+            </div>
+          ) : (
+            <p style={{ color: '#fff' }}>Select a file to view problems.</p>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   )
 }

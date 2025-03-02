@@ -26,7 +26,6 @@ html {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 24px;
   padding: 0px;
   color: #fff;
 }
@@ -39,14 +38,13 @@ html {
 .custom-dropdown {
   width: 180px; /* Adjust width as needed */
   padding: 8px;
-  font-size: 16px;
   border: none; /* Remove default border */
   border-radius: 5px; /* Add border radius for aesthetics */
 }
 
 .auto-grid-blog {
   list-style-type: none;
-  padding: 10px;
+  padding: 0px 20px 20px 30px;
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -87,15 +85,12 @@ html {
 
 .blog-card-title {
   margin: 0;
-  font-size: 20px;
-  font-weight: bold;
   color: #333333; /* Title color */
 }
 
 .blog-card-description {
   margin-top: 10px;
   color: #555;
-  font-size: 16px;
   /* Clamp description to 3 lines */
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -105,7 +100,6 @@ html {
 
 .blog-card-footer {
   margin-top: 10px;
-  font-size: 14px;
   color: #888;
 }
 
@@ -143,7 +137,6 @@ html {
   width: 100%;
   max-width: 1000px; /* Optional: limits the width of the search bar */
   padding: 10px;
-  font-size: 1rem;
   border: 1px solid #ddd;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

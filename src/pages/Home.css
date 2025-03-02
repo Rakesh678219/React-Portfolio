@@ -14,7 +14,7 @@
   background-color: #ffffff; /* Whitish background */
   color: #333333; /* Dark text color */
   text-align: left;
-  border-radius: 20px;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow effect */
   transition: transform 0.3s ease; /* Smooth transformation */
 }
@@ -24,13 +24,11 @@
 }
 
 .my-details h1 {
-  font-size: 36px;
   font-weight: bold;
   color: #ff8c00; /* Orange primary color */
 }
 
 .my-details p {
-  font-size: 18px;
   margin-bottom: 20px;
 }
 
@@ -42,7 +40,6 @@
   background-color: #ff8c00; /* Orange button background */
   color: #ffffff;
   padding: 12px 24px;
-  font-size: 18px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -77,12 +74,10 @@
 }
 
 .split-div2 h1.name {
-  font-size: 24px;
   color: #ff8c00; /* Orange primary color */
 }
 
 .split-div2 p {
-  font-size: 16px;
   line-height: 1.8;
   color: #dcdcdc; /* Lightened text color */
 }
@@ -94,7 +89,6 @@
   }
 
   .my-details {
-    font-size: 18px;
     padding: 20px;
   }
 

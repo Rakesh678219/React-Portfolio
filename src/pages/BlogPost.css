@@ -8,7 +8,6 @@
 }
 
 .blog-post-title {
-  font-size: 2rem;
   margin-bottom: 10px;
   color: #fff; /* Inherit light text color */
 }
@@ -22,13 +21,11 @@
 
 .publish-date,
 .reading-time {
-  font-size: 0.9rem;
   color: orange; /* Orange color for date and reading time */
 }
 
 .markdown-body {
   line-height: 1.6;
-  font-size: 1.1rem;
   color: #ddd; /* Lighter text color */
   text-align: left;
   word-wrap: break-word;
@@ -76,7 +73,6 @@
 
 .example-testcases li {
   margin-bottom: 8px;
-  font-size: 16px;
 }
 
 .hints {
@@ -89,7 +85,6 @@
 
 .hints li {
   margin-bottom: 8px;
-  font-size: 16px;
   color: #fff;
   position: relative;
 }

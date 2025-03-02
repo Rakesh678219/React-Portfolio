@@ -4,6 +4,7 @@
 html {
   height: 100%;
   box-sizing: border-box;
+  font-size: 14px; /* Reduce base font size */
 }
 
 *,
@@ -15,10 +16,12 @@ html {
 body {
   position: relative;
   margin-bottom: -8px;
-  padding-bottom: 6rem;
+  padding-bottom: 4rem;
   min-height: 100%;
   font-family: 'Lato', sans-serif;
   background-color: #181823d0;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .footer {
@@ -26,15 +29,17 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  padding: 1rem;
+  padding: 0.5rem;
   background-color: #181823;
   text-align: center;
   color: #faf9f6;
+  font-size: 12px;
 }
 
 a {
   text-decoration: none;
   color: #fff;
+  font-size: 14px;
 }
 
 ul {
@@ -43,7 +48,7 @@ ul {
 }
 
 .footer-social-icons {
-  width: 350px;
+  width: 280px;
   display: block;
   margin: 0 auto;
 }
@@ -53,7 +58,7 @@ ul {
 }
 
 ul.social-icons {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 .social-icons li {
@@ -64,71 +69,54 @@ ul.social-icons {
 .social-icons a {
   color: #fff;
   text-decoration: none;
+  font-size: 12px;
 }
 
 .fa-facebook,
 .fa-whatsapp,
 .fa-linkedin,
 .fa-instagram {
-  padding: 10px 14px;
+  padding: 8px 10px;
   transition: background-color 0.5s ease;
   background-color: #322f30;
 }
 
-.fa-facebook:hover {
-  background-color: #3d5b99;
-}
-
-.fa-whatsapp:hover {
-  background-color: #04a884;
-}
-
-.fa-linkedin:hover {
-  background-color: #0073a4;
-}
-
-.fa-instagram:hover {
-  background-color: #e95950;
-}
-
-.all-rights-reserved {
-  margin-top: 3rem;
-}
-
 .row {
-  padding: 1em 1em;
+  padding: 0.5em 0.5em;
 }
 
 .row.primary {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 2fr;
   align-items: stretch;
+  gap: 10px;
 }
 
 .column {
   width: 100%;
   display: flex;
   flex-direction: column;
-  padding: 0 2em;
-  min-height: 5em;
+  padding: 0 1.5em;
+  min-height: 4em;
 }
 
 .about p {
   text-align: left;
-  line-height: 2;
+  line-height: 1.6;
   margin: 0;
+  font-size: 13px;
 }
 
 li:not(:first-child) {
-  margin-top: 0.8em;
+  margin-top: 0.5em;
 }
 
 input,
 button {
-  font-size: 1em;
-  padding: 1em;
+  font-size: 12px;
+  padding: 0.8em;
   width: 100%;
-  margin-bottom: 5px;
+  margin-bottom: 4px;
 }
 
 button {
@@ -138,16 +126,19 @@ button {
 
 .heading {
   text-align: center;
-  color: #333333;
-  font-size: 1.5em;
+  color: #ccc;
+  font-size: 1.2em;
+  margin-bottom: 0.5em;
 }
 
 .text-content {
-  color: #000;
-  line-height: 1.5;
+  color: #bbb;
+  line-height: 1.4;
+  font-size: 13px;
 }
 
 .sub-heading {
   text-align: left;
-  color: #ooo;
+  color: #ddd;
+  font-size: 14px;
 }

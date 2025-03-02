@@ -9,7 +9,6 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 10px;
   box-sizing: border-box;
-  font-size: 16px;
 }
 
 /* Button styles */
@@ -22,7 +21,6 @@ input[type='submit'] {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  font-size: 16px;
 }
 
 input[type='submit']:hover {
@@ -50,7 +48,6 @@ input[type='submit']:hover {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
-  font-size: 24px;
   color: #fff;
   padding: 10px;
 }
