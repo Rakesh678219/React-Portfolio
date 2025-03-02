@@ -110,7 +110,7 @@ export default function LeetcodeExplorer() {
           {csvData ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
               {csvData.map((question, index) => (
-                <LeetcodeCard key={index} question={question} />
+                <LeetcodeCard number={index} key={index} question={question} />
               ))}
             </div>
           ) : (

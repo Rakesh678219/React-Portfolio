@@ -14,7 +14,9 @@ const LeetcodeCard = (props: any) => {
       key={question.Title}
     >
       <div className="card">
-        <h3 className="card-title">{question.Title}</h3>
+        <h3 className="card-title">
+          {props.number + 1 + ') ' + question.Title}
+        </h3>
         <p className="card-difficulty">Difficulty: {question.Difficulty}</p>
         <div className="tags-container">
           {question.Topics &&
