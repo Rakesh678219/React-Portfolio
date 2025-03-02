@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { Button } from './ui/button'
 import Papa from 'papaparse'
+import LeetcodeCard from './LeetcodeCard'
 
 const GITHUB_REPO =
   'https://api.github.com/repos/liquidslr/leetcode-company-wise-problems/contents/'
@@ -18,7 +18,8 @@ export default function LeetcodeExplorer() {
   const [folders, setFolders] = useState<Folder[]>([])
   const [files, setFiles] = useState<File[]>([])
   const [csvData, setCsvData] = useState<any[] | null>(null)
-  const [selectedCompany, setSelectedCompany] = useState<string | null>(null)
+  const [selectedCompany, setSelectedCompany] = useState<string>('')
+  const [selectedFile, setSelectedFile] = useState<string>('')
 
   useEffect(() => {
     fetch(GITHUB_REPO)
@@ -26,6 +27,9 @@ export default function LeetcodeExplorer() {
       .then((data) => {
         const companies = data.filter((item: any) => item.type === 'dir')
         setFolders(companies)
+        if (companies.length > 0) {
+          fetchFiles(companies[0].name)
+        }
       })
       .catch((error) => console.error('Error fetching folders:', error))
   }, [])
@@ -37,23 +41,24 @@ export default function LeetcodeExplorer() {
         const csvFiles = data.filter((item: any) => item.name.endsWith('.csv'))
         setFiles(csvFiles)
         setSelectedCompany(company)
-        setCsvData(null)
+        if (csvFiles.length > 0) {
+          const lastFile = csvFiles[csvFiles.length - 1]
+          setSelectedFile(lastFile.download_url)
+          fetchCsvData(lastFile.download_url)
+        }
       })
       .catch((error) => console.error('Error fetching files:', error))
   }
 
-  const fetchCsvData = (file: File) => {
-    fetch(file.download_url)
+  const fetchCsvData = (fileUrl: string) => {
+    fetch(fileUrl)
       .then((res) => res.text())
       .then((csvText) => {
         Papa.parse(csvText, {
           header: true,
+          skipEmptyLines: true,
           complete: (result) => {
-            const filteredData = result.data.map((row: any) => {
-              const { 'Acceptance Rate': _, ...rest } = row
-              return rest
-            })
-            setCsvData(filteredData.length > 0 ? filteredData : [])
+            setCsvData(result.data)
           },
         })
       })
@@ -64,72 +69,51 @@ export default function LeetcodeExplorer() {
   }
 
   return (
-    <div className="flex h-screen p-4 gap-4 bg-gray-50">
-      {/* Sidebar */}
-      <div className="w-1/4 p-4 border-r overflow-y-auto bg-white rounded-lg shadow-md">
-        <h2 className="text-xl font-bold mb-4">Companies</h2>
-        <div className="grid grid-cols-1 gap-2">
+    <div className="p-6">
+      <div style={{ marginBottom: '10px' }}>
+        {/* Company Dropdown */}
+        <select
+          className="custom-dropdown"
+          value={selectedCompany}
+          onChange={(e) => fetchFiles(e.target.value)}
+        >
+          <option value="">Select Company</option>
           {folders.map((folder) => (
-            <Button
-              key={folder.name}
-              className="w-full text-left shadow-md p-2 rounded-lg hover:bg-gray-200"
-              onClick={() => fetchFiles(folder.name)}
-            >
-              📁 {folder.name}
-            </Button>
+            <option key={folder.name} value={folder.name}>
+              {folder.name}
+            </option>
           ))}
-        </div>
+        </select>
+
+        {/* File Dropdown */}
+        <select
+          className="custom-dropdown"
+          value={selectedFile}
+          onChange={(e) => {
+            setSelectedFile(e.target.value)
+            fetchCsvData(e.target.value)
+          }}
+          disabled={!selectedCompany}
+        >
+          <option value="">Select File</option>
+          {files.map((file) => (
+            <option key={file.name} value={file.download_url}>
+              {file.name}
+            </option>
+          ))}
+        </select>
       </div>
 
-      {/* File List */}
-      <div className="w-1/4 p-4 border-r overflow-y-auto bg-white rounded-lg shadow-md">
-        {selectedCompany && (
-          <>
-            <h2 className="text-xl font-bold mb-4">{selectedCompany}</h2>
-            <div className="grid grid-cols-1 gap-2">
-              {files.map((file) => (
-                <Button
-                  key={file.name}
-                  className="w-full text-left shadow-md p-2 rounded-lg hover:bg-gray-200"
-                  onClick={() => fetchCsvData(file)}
-                >
-                  📄 {file.name}
-                </Button>
-              ))}
-            </div>
-          </>
-        )}
-      </div>
-
-      {/* CSV Data as Cards */}
-      <div className="w-1/2 p-4 overflow-y-auto bg-white rounded-lg shadow-md">
+      {/* CSV Data Display */}
+      <div>
         {csvData ? (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {csvData.map((row, index) => (
-              <div
-                key={index}
-                className="p-6 bg-gradient-to-br from-white to-gray-100 shadow-xl rounded-2xl cursor-pointer hover:bg-gray-200 transition-transform transform hover:scale-105 border border-gray-200"
-                onClick={() => window.open(row.Link, '_blank')}
-              >
-                <h3 className="text-lg font-bold mb-2 text-gray-800">
-                  {row.Title}
-                </h3>
-                <p className="text-sm text-gray-600 mb-1">
-                  Topic: <span className="font-medium">{row.Topics}</span>
-                </p>
-                <p className="text-sm text-gray-500">
-                  Difficulty:{' '}
-                  <span className="font-semibold text-indigo-600">
-                    {row.Difficulty}
-                  </span>
-                </p>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+            {csvData.map((question, index) => (
+              <LeetcodeCard key={index} question={question} />
             ))}
           </div>
         ) : (
-          <p className="text-center text-gray-600">
-            Select a file to view problems.
-          </p>
+          <p>Select a file to view problems.</p>
         )}
       </div>
     </div>
