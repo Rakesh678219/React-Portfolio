@@ -19,19 +19,13 @@ const Blog = () => {
     setSearchQuery(event.target.value.toLowerCase())
   }
   // https://chatgpt.com/share/67bc4dd2-6050-800f-9a87-f5eac50e9ecb
+
   async function fetchData(page: any, pageSize: any) {
     try {
       const response = await axios.get(
-        `${BASE_URL}articles/me/published?page=${page}&per_page=${pageSize}`,
-        {
-          headers: {
-            // Accept: 'application/vnd.forem.api-v1+json', // Required accept header
-            // 'api-key': DEV_API_KEY, // Your API key
-            'Content-Type': 'application/json',
-            'API-Key': DEV_API_KEY,
-          },
-        }
+        `https://react-portfolio-git-master-rakesh678219s-projects.vercel.app/api/devto?page=${page}&per_page=${pageSize}`
       )
+
       setLeetCodeArticles(response.data)
       return response.data // Returning response data
     } catch (error) {
