@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "devto-proxy/server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "devto-proxy/server.js"
+    }
+  ]
+}
