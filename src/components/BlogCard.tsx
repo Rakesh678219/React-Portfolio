@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 const BlogCard = (props: any) => {
   const navigate = useNavigate()
-  const localTime = moment.utc(props.createdAt).local()
+  const createdAt: any = props.createdAt
 
   const handleReadMore = () => {
     navigate(`/blog/${props.slug}`)
@@ -16,7 +16,7 @@ const BlogCard = (props: any) => {
       <img width="100%" src={props.img} alt="" />
       <small>
         By <strong className="created-by">{props.createdBy}</strong> |{' '}
-        {moment(localTime.format()).format('YYYY-MM-DD HH:mm:ss')}
+        {moment(createdAt).format('MMMM D, YYYY')}
       </small>
       <h3 className="sub-heading">{props.title}</h3>
       <p className="text-content">{props.content.substring(0, 120) + '...'}</p>
