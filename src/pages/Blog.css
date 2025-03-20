@@ -147,3 +147,11 @@ html {
   border-color: #007bff;
   outline: none;
 }
+
+code {
+  background-color: black;
+  max-width: 100%;
+  background: #333333;
+  border-radius: 5px;
+  padding: 0.2em 0.25em;
+}
