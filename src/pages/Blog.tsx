@@ -3,9 +3,6 @@ import BlogCard from '../components/BlogCard'
 import './Blog.css'
 import axios from 'axios'
 const Blog = () => {
-  const DEV_API_KEY = 'yZmXLY3jYhWms39Gxgqnfc28'
-
-  const BASE_URL = 'https://dev.to/api/'
   // State to manage selected category
   const [selectedCategory, setSelectedCategory] = useState('all')
   const [searchQuery, setSearchQuery] = useState('')
