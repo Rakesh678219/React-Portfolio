@@ -9,6 +9,7 @@ import rehypeRaw from 'rehype-raw'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import PaymentQR from './PatymentQR'
+import TableOfContents from '../components/TableOfContents'
 
 interface MarkdownComponentProps {
   article: {
@@ -106,6 +107,7 @@ const BlogPost = () => {
 
   return (
     <div className="blog-post-container">
+      <TableOfContents />
       <a
         href={leetCodeDetails?.link ?? '#'}
         target="_blank"
@@ -185,6 +187,7 @@ const BlogPost = () => {
       <ReactMarkdown
         className="markdown-body"
         remarkPlugins={[remarkGfm]}
+        rehypePlugins={[rehypeRaw]}
         components={{
           code({ node, inline, className, children, ...props }) {
             const match = /language-(\w+)/.exec(className || '')
@@ -206,7 +209,6 @@ const BlogPost = () => {
       >
         {processMarkdownContent(article.body_markdown)}
       </ReactMarkdown>
-
       <PaymentQR />
       <p className="published-by">Published by: {article.user.name}</p>
       {/* Render comments section */}
