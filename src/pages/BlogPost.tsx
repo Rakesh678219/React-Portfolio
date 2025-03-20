@@ -10,6 +10,7 @@ import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 import PaymentQR from './PatymentQR'
 import TableOfContents from '../components/TableOfContents'
+import SuggestedProblem from '../components/SuggestedProblem'
 
 interface MarkdownComponentProps {
   article: {
@@ -108,6 +109,12 @@ const BlogPost = () => {
   return (
     <div className="blog-post-container">
       <TableOfContents />
+      {leetCodeDetails?.similarQuestions?.length > 0 && (
+        <SuggestedProblem
+          problems={JSON.parse(leetCodeDetails?.similarQuestions)}
+        />
+      )}
+
       <a
         href={leetCodeDetails?.link ?? '#'}
         target="_blank"

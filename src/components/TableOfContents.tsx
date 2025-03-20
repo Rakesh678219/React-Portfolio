@@ -24,9 +24,13 @@ const TableOfContents = () => {
         padding: '10px',
         top: '80px',
         width: '300px',
+        minHeight: '50vh',
       }}
     >
-      <h3 style={{ color: 'orange' }}> 📑 Table of Contents</h3>
+      <h3 style={{ color: 'orange', marginLeft: '20px' }}>
+        {' '}
+        Table of Contents
+      </h3>
       <ol>
         {headings.map(({ id, text, level }) => (
           <li
