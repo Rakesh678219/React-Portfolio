@@ -207,8 +207,8 @@ const BlogPost = () => {
         {processMarkdownContent(article.body_markdown)}
       </ReactMarkdown>
 
-      <p className="published-by">Published by: {article.user.name}</p>
       <PaymentQR />
+      <p className="published-by">Published by: {article.user.name}</p>
       {/* Render comments section */}
       {article.id && <CommentSection articleId={article.id} />}
     </div>
