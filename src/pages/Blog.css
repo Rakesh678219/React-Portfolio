@@ -155,3 +155,6 @@ code {
   border-radius: 5px;
   padding: 0.2em 0.25em;
 }
+pre code {
+  color: inherit;
+}
