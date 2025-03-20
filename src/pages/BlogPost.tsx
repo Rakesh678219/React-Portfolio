@@ -8,6 +8,7 @@ import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
 import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
+import PaymentQR from './PatymentQR'
 
 interface MarkdownComponentProps {
   article: {
@@ -207,25 +208,7 @@ const BlogPost = () => {
       </ReactMarkdown>
 
       <p className="published-by">Published by: {article.user.name}</p>
-      <div style={{ display: 'grid' }}>
-        <a
-          href="https://ko-fi.com/rakeshreddy"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            height="36"
-            style={{
-              border: '0px',
-              height: '36px',
-              marginTop: '30px',
-              float: 'right',
-            }}
-            src="https://storage.ko-fi.com/cdn/kofi5.png?v=3"
-            alt="Buy Me a Coffee at ko-fi.com"
-          />
-        </a>
-      </div>
+      <PaymentQR />
       {/* Render comments section */}
       {article.id && <CommentSection articleId={article.id} />}
     </div>
