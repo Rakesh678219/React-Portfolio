@@ -35,16 +35,6 @@
   color: #4ea3f0; /* Light blue color for links */
 }
 
-.markdown-body pre {
-  white-space: pre-wrap;
-  overflow-x: auto;
-  background-color: #282c34; /* Darker background for code blocks */
-  color: #ccc; /* Lighter text color for code blocks */
-  padding: 10px;
-  border-radius: 5px;
-  margin-bottom: 15px;
-}
-
 .markdown-body img {
   max-width: 100%;
   height: auto;

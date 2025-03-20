@@ -6,6 +6,8 @@ import CommentSection from '../components/CommentSection'
 import axios from 'axios' // Import axios for making HTTP requests
 import remarkGfm from 'remark-gfm'
 import rehypeRaw from 'rehype-raw'
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter'
+import { materialDark } from 'react-syntax-highlighter/dist/esm/styles/prism'
 
 interface MarkdownComponentProps {
   article: {
@@ -182,10 +184,28 @@ const BlogPost = () => {
       <ReactMarkdown
         className="markdown-body"
         remarkPlugins={[remarkGfm]}
-        rehypePlugins={[rehypeRaw]} // Enable raw HTML rendering
+        components={{
+          code({ node, inline, className, children, ...props }) {
+            const match = /language-(\w+)/.exec(className || '')
+            return !inline && match ? (
+              <SyntaxHighlighter
+                style={materialDark}
+                language={match[1]}
+                showLineNumbers
+              >
+                {String(children).replace(/\n$/, '')}
+              </SyntaxHighlighter>
+            ) : (
+              <code className={className} {...props}>
+                {children}
+              </code>
+            )
+          },
+        }}
       >
         {processMarkdownContent(article.body_markdown)}
       </ReactMarkdown>
+
       <p className="published-by">Published by: {article.user.name}</p>
       <div style={{ display: 'grid' }}>
         <a
