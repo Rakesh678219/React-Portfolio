@@ -26,7 +26,7 @@ const TableOfContents = () => {
       }}
     >
       <h3 style={{ color: 'orange' }}> 📑 Table of Contents</h3>
-      <ul>
+      <ol>
         {headings.map(({ id, text, level }) => (
           <li
             key={id}
@@ -43,7 +43,7 @@ const TableOfContents = () => {
             </a>
           </li>
         ))}
-      </ul>
+      </ol>
     </nav>
   )
 }
