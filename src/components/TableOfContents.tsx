@@ -20,18 +20,14 @@ const TableOfContents = () => {
         borderRadius: '5px',
         position: 'absolute',
         left: '20px',
-        background: '#181823',
         padding: '10px',
-        top: '80px',
+        top: '53px',
         width: '300px',
         minHeight: '50vh',
       }}
     >
-      <h3 style={{ color: 'orange', marginLeft: '20px' }}>
-        {' '}
-        Table of Contents
-      </h3>
-      <ol>
+      <h3 style={{ color: '#848c90' }}> Table of Contents</h3>
+      <ul>
         {headings.map(({ id, text, level }) => (
           <li
             key={id}
@@ -42,13 +38,13 @@ const TableOfContents = () => {
           >
             <a
               href={`#${id}`}
-              style={{ textDecoration: 'none', color: '#fff' }}
+              style={{ textDecoration: 'none', color: '#dcdcdc' }}
             >
               {text}
             </a>
           </li>
         ))}
-      </ol>
+      </ul>
     </nav>
   )
 }

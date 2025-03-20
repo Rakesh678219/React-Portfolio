@@ -4,11 +4,11 @@ const SuggestedProblem = ({ problems }) => {
   return (
     <div
       style={{
-        backgroundColor: '#1a1a25',
+        color: '#848c90',
         padding: '16px',
         position: 'absolute',
         right: '20px',
-        top: '80px',
+        top: '53px',
         borderRadius: '5px',
         boxShadow: '0px 0px 10px rgba(0,0,0,0.1)',
         minHeight: '50vh',
@@ -24,7 +24,7 @@ const SuggestedProblem = ({ problems }) => {
       >
         Suggested Problems
       </h2>
-      <ol style={{ padding: 10 }}>
+      <ul>
         {problems.map((problem: any, index: any) => (
           <li
             key={index}
@@ -43,7 +43,7 @@ const SuggestedProblem = ({ problems }) => {
             </a>
           </li>
         ))}
-      </ol>
+      </ul>
     </div>
   )
 }
