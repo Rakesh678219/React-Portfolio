@@ -22,10 +22,7 @@ const PaymentQR = () => {
       <h2 className="text-lg font-bold text-gray-800 mb-2">
         Support My Blog ❤️
       </h2>
-      <h3>
-        If this blog helped you, consider a small contribution! Even ₹10 makes a
-        difference.
-      </h3>
+      <h3>If this blog helped you, consider a small contribution!</h3>
       <div className="flex items-center gap-2">
         <p className="text-gray-600 whitespace-nowrap">
           Enter the amount you’d like to donate
