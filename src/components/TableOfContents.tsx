@@ -17,11 +17,12 @@ const TableOfContents = () => {
   return (
     <nav
       style={{
+        borderRadius: '5px',
         position: 'absolute',
         left: '20px',
         background: '#181823',
         padding: '10px',
-        height: '80vh',
+        top: '80px',
         width: '300px',
       }}
     >
