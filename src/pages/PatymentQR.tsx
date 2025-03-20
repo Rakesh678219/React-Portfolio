@@ -16,19 +16,16 @@ const PaymentQR = () => {
 
   return (
     <div
-      style={{ backgroundColor: 'rgba(0, 0, 0, 0.1)', padding: 'inherit' }}
+      style={{
+        backgroundColor: 'rgba(0, 0, 0, 0.1)',
+        padding: 'inherit',
+      }}
       className="text-center p-4 bg-gray-100 rounded-lg shadow-md w-80 mx-auto"
     >
       <h2 className="text-lg font-bold text-gray-800 mb-2">
         Support My Blog ❤️
       </h2>
       <h3>If this blog helped you, consider a small contribution!</h3>
-      <div className="flex items-center gap-2">
-        <p className="text-gray-600 whitespace-nowrap">
-          Enter the amount you’d like to donate
-        </p>
-        <div></div>
-      </div>
 
       <div
         style={{
