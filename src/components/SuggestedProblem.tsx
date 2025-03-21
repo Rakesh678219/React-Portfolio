@@ -18,7 +18,7 @@ const SuggestedProblem = ({ problems }) => {
           fontSize: '18px',
           fontWeight: 'bold',
           marginBottom: '12px',
-          color: 'orange',
+          color: 'rgb(132, 140, 144)',
         }}
       >
         Suggested Problems
