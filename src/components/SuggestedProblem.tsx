@@ -10,7 +10,6 @@ const SuggestedProblem = ({ problems }) => {
         right: '20px',
         top: '53px',
         borderRadius: '5px',
-        boxShadow: '0px 0px 10px rgba(0,0,0,0.1)',
         minHeight: '50vh',
       }}
     >
