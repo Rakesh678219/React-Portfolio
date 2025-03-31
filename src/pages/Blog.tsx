@@ -17,10 +17,10 @@ const Blog = () => {
   }
   // https://chatgpt.com/share/67bc4dd2-6050-800f-9a87-f5eac50e9ecb
 
-  async function fetchData(page: any, pageSize: any) {
+  async function fetchData(page: number) {
     try {
       const response = await axios.get(
-        `https://react-portfolio-git-master-rakesh678219s-projects.vercel.app/api/devto?page=${page}&per_page=${pageSize}`
+        `https://react-portfolio-git-master-rakesh678219s-projects.vercel.app/api/devto?page=${page}`
       )
 
       setLeetCodeArticles(response.data)
